@@ -12,7 +12,7 @@ body::-webkit-scrollbar:vertical {
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: var(--red);
+	background-color: var(--pri);
 	width: 100%;
 	border-radius: 25px;
 }
