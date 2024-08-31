@@ -2,6 +2,7 @@ import css from "./css.module.css";
 import Logo from "../../components/logos/Logo/Logo";
 import { Link } from "react-router-dom";
 import { ANIME, HOME } from "../router/children";
+import LinkTo from "../../components/links/LinkTo/LinkTo";
 
 export default function Header() {
 	return (
@@ -10,8 +11,8 @@ export default function Header() {
 				<Link className={css.logo} to={HOME.path}>
 					<Logo />
 				</Link>
-				<Link to={HOME.path}>{HOME.display}</Link>
-				<Link to={ANIME.path}>{ANIME.display}</Link>
+				<LinkTo to={HOME.path}>{HOME.display}</LinkTo>
+				<LinkTo to={ANIME.path}>{ANIME.display}</LinkTo>
 			</nav>
 		</header>
 	);
