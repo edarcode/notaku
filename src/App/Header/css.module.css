@@ -1,6 +1,15 @@
 .header {
+	background-color: var(--bg-surf);
+	padding: var(--md) var(--lg);
+}
+
+.nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: var(--sm);
+	gap: var(--md);
+}
+
+.logo {
+	margin-right: auto;
 }
