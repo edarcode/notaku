@@ -3,7 +3,9 @@ import { Outlet } from "react-router-dom";
 function App() {
 	return (
 		<>
-			<header>📌</header>
+			<header>
+				<h1>Notaku</h1>
+			</header>
 			<main>
 				<Outlet />
 			</main>
