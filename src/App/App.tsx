@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
+import Footer from "./Footer/Footer";
+import Header from "./Header/Header";
 
 function App() {
 	return (
 		<>
-			<header>
-				<h1>Notaku</h1>
-			</header>
+			<Header />
 			<main>
 				<Outlet />
 			</main>
-			<footer>✏️ edarcode</footer>
+			<Footer />
 		</>
 	);
 }
