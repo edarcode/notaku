@@ -1,4 +1,4 @@
-import Anime from "../pages/Anime/Anime";
+import Animes from "../pages/Animes/Animes";
 import Home from "../pages/Home/Home";
 
 export const HOME = {
@@ -8,9 +8,9 @@ export const HOME = {
 	element: <Home />
 };
 
-export const ANIME = {
+export const ANIMES = {
 	id: crypto.randomUUID(),
-	path: "/anime",
-	display: "Anime",
-	element: <Anime />
+	path: "/animes",
+	display: "Animes",
+	element: <Animes />
 };

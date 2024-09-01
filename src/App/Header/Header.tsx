@@ -1,7 +1,7 @@
 import css from "./css.module.css";
 import Logo from "../../components/logos/Logo/Logo";
 import { Link } from "react-router-dom";
-import { ANIME, HOME } from "../router/children";
+import { ANIMES, HOME } from "../router/children";
 import LinkTo from "../../components/links/LinkTo/LinkTo";
 
 export default function Header() {
@@ -12,7 +12,7 @@ export default function Header() {
 					<Logo />
 				</Link>
 				<LinkTo to={HOME.path}>{HOME.display}</LinkTo>
-				<LinkTo to={ANIME.path}>{ANIME.display}</LinkTo>
+				<LinkTo to={ANIMES.path}>{ANIMES.display}</LinkTo>
 			</nav>
 		</header>
 	);

@@ -1,10 +1,10 @@
 import css from "./css.module.css";
-import TheBestAnimes from "./TheBestAnimes/TheBestAnimes";
+import TopAnimes from "./TopAnimes/TopAnimes";
 
 export default function Home() {
 	return (
 		<div className={css.home}>
-			<TheBestAnimes />
+			<TopAnimes />
 		</div>
 	);
 }
