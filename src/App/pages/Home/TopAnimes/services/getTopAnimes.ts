@@ -1,9 +1,8 @@
 import { KITSU } from "../../../../../kitsu/urls";
 import { EdarErr } from "../../../../../err/EdarErr";
 
-export const getTopAnimes = async (signal: AbortSignal) => {
+export const getTopAnimes = async () => {
 	const res = await fetch(KITSU.topAnimes, {
-		signal,
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json"
@@ -25,7 +24,7 @@ export const getTopAnimes = async (signal: AbortSignal) => {
 
 const mapKitsuRes = (kitsuRes: any) => {
 	const kitsuAnimes = kitsuRes.data;
-	const topAnimes = kitsuAnimes.map((anime: any) => ({
+	const topAnimes: Anime[] = kitsuAnimes.map((anime: any) => ({
 		id: anime.id,
 		title: anime.attributes.canonicalTitle,
 		synopsis: anime.attributes.synopsis,
@@ -35,4 +34,60 @@ const mapKitsuRes = (kitsuRes: any) => {
 	}));
 
 	return topAnimes;
+};
+
+type Anime = {
+	id: string;
+	title: string;
+	synopsis: string;
+	rating: string;
+	posterImages: {
+		tiny: string;
+		large: string;
+		small: string;
+		medium: string;
+		original: string;
+		meta: {
+			dimensions: {
+				tiny: {
+					width: number;
+					height: number;
+				};
+				large: {
+					width: number;
+					height: number;
+				};
+				small: {
+					width: number;
+					height: number;
+				};
+				medium: {
+					width: number;
+					height: number;
+				};
+			};
+		};
+	};
+	coverImages: {
+		tiny: string;
+		large: string;
+		small: string;
+		original: string;
+		meta: {
+			dimensions: {
+				tiny: {
+					width: number;
+					height: number;
+				};
+				large: {
+					width: number;
+					height: number;
+				};
+				small: {
+					width: number;
+					height: number;
+				};
+			};
+		};
+	};
 };
