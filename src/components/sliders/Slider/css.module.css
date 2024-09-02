@@ -1,0 +1,27 @@
+.slider {
+	position: relative;
+}
+
+.content {
+	display: flex;
+	overflow: hidden;
+}
+
+.item {
+	min-width: 100%;
+}
+
+.back,
+.next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.back {
+	transform: rotate(180deg);
+}
+
+.next {
+	right: 0;
+}

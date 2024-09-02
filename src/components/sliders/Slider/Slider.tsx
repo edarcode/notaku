@@ -1,13 +1,21 @@
+import IconBtn from "../../buttons/IconBtn/IconBtn";
+import css from "./css.module.css";
+
 export default function Slider({ content }: Props) {
 	return (
-		<article>
-			{content.map(item => (
-				<div key={item.id}>
-					<img src={item.img} alt={item.title} />
-					<div>{item.title}</div>
-					<div>{item.rating}</div>
-				</div>
-			))}
+		<article className={css.slider}>
+			<section className={css.content}>
+				{content.map(item => (
+					<div key={item.id} className={css.item}>
+						<img src={item.img} alt={item.title} />
+						<div>{item.title}</div>
+						<div>{item.rating}</div>
+					</div>
+				))}
+			</section>
+
+			<IconBtn className={css.back} />
+			<IconBtn className={css.next} />
 		</article>
 	);
 }
