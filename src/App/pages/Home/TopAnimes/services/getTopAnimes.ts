@@ -33,6 +33,13 @@ const mapKitsuRes = (kitsuRes: any) => {
 		coverImages: anime.attributes.coverImage
 	}));
 
+	// const result: Anime[] = [];
+	// for (let i = 0; i < topAnimes.length; i++) {
+	// 	const element = topAnimes[i];
+	// 	if (result.some(anime => element.title.includes(anime.title))) continue;
+	// 	result.push(element);
+	// }
+
 	return topAnimes;
 };
 
