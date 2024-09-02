@@ -14,7 +14,7 @@ export default function TopAnimes() {
 
 	if (isError) return <div>Error</div>;
 	if (isLoading) return <div>Cargando...</div>;
-	if (!topAnimes) return <div>No hay animes</div>;
+	if (!topAnimes || !topAnimes.length) return <div>No hay animes</div>;
 
 	return (
 		<Slider

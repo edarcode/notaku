@@ -1,14 +1,40 @@
 .slider {
 	position: relative;
+	height: 500px;
 }
 
-.content {
-	display: flex;
-	overflow: hidden;
+.img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(80%);
 }
 
-.item {
-	min-width: 100%;
+.title,
+.rating {
+	position: absolute;
+}
+
+.title {
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.rating {
+	bottom: var(--sm);
+	right: var(--lg);
+	background-color: var(--pri);
+	padding: var(--sm);
+	border-radius: var(--md);
+	line-height: 25px;
+}
+
+.rating,
+.title {
+	font-size: x-large;
+	color: whitesmoke;
+	font-weight: 700;
 }
 
 .back,
