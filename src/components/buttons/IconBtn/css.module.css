@@ -1,13 +1,14 @@
 .btn {
 	--size-err: 20px;
 	position: relative;
-	border: 2px solid transparent;
+	border: none;
 	cursor: pointer;
 	border-radius: 50%;
 	width: 28px;
 	height: 28px;
 	padding: 0;
 	color: var(--t-main);
+	background-color: transparent;
 }
 
 .btn:disabled {
@@ -20,22 +21,4 @@
 .icon {
 	width: 100%;
 	height: 100%;
-}
-
-.primary {
-	background-color: var(--pri);
-}
-
-.secondary {
-	background-color: var(--sec);
-}
-
-@media (prefers-color-scheme: light) {
-	.primary {
-		background-color: var(--l-pri);
-	}
-
-	.secondary {
-		background-color: var(--l-sec);
-	}
 }

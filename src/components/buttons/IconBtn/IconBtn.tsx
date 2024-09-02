@@ -2,7 +2,7 @@ import css from "./css.module.css";
 import { joinClass } from "./utils/joinClass";
 import { Props } from "./types";
 import { KINDS } from "./kinds";
-import Cross from "./icons/Cross";
+import Arrow from "./icons/Arrow";
 
 export default function IconBtn(props: Props) {
 	const { isVisible = true, kind, className, Icon, ...extraProps } = props;
@@ -12,7 +12,7 @@ export default function IconBtn(props: Props) {
 	if (!isVisible) return null;
 	return (
 		<button {...extraProps} className={finalClass}>
-			{Icon ? <Icon className={css.icon} /> : <Cross className={css.icon} />}
+			{Icon ? <Icon className={css.icon} /> : <Arrow className={css.icon} />}
 		</button>
 	);
 }
