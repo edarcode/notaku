@@ -1,3 +1,3 @@
 export default function Animes() {
-	return <div>Anime</div>;
+	return <div>Aún estamos trabajando en esta vista</div>;
 }
