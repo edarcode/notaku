@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function Networks({ className }: Props) {
-	const finalClassName = joinClass([css.networks, className]);
+	const finalClassName = joinClass([className, css.networks]);
 	const networks = NETWORKS.map(network => (
 		<a
 			key={network.name}

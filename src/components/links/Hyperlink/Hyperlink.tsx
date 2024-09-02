@@ -17,7 +17,7 @@ export default function Hyperlink({
 	rel = "noopener noreferrer",
 	...props
 }: Props) {
-	const finalClass = joinClass([css.link, className]);
+	const finalClass = joinClass([className, css.link]);
 
 	return (
 		<a {...props} href={href} className={finalClass} target={target} rel={rel}>

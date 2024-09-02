@@ -17,10 +17,10 @@ export default function Btn(props: Props) {
 	} = props;
 
 	const finalClass = joinClass([
+		className,
 		css.btn,
 		err && css.btn__err,
-		BTN_KIND[kind ?? "primary"],
-		className
+		BTN_KIND[kind ?? "primary"]
 	]);
 
 	if (!isVisible) return null;

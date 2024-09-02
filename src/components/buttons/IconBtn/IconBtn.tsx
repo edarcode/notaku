@@ -7,7 +7,7 @@ import Arrow from "./icons/Arrow";
 export default function IconBtn(props: Props) {
 	const { isVisible = true, kind, className, Icon, ...extraProps } = props;
 
-	const finalClass = joinClass([css.btn, KINDS[kind ?? "primary"], className]);
+	const finalClass = joinClass([className, css.btn, KINDS[kind ?? "primary"]]);
 
 	if (!isVisible) return null;
 	return (
