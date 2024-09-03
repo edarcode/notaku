@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import IconBtn from "../../buttons/IconBtn/IconBtn";
 import css from "./css.module.css";
+import { motion, Variants } from "framer-motion";
 
 export default function Slider({ content }: Props) {
 	const [index, setIndex] = useState(0);
@@ -9,7 +10,7 @@ export default function Slider({ content }: Props) {
 	useEffect(() => {
 		const intervalId = setInterval(() => {
 			nextItem();
-		}, 8000);
+		}, 4000);
 
 		return () => clearInterval(intervalId);
 	}, []);
@@ -30,7 +31,15 @@ export default function Slider({ content }: Props) {
 
 	return (
 		<article className={css.slider}>
-			<img className={css.img} src={item.img} alt={item.title} />
+			<motion.img
+				key={item.id}
+				className={css.img}
+				src={item.img}
+				alt={item.title}
+				variants={variants}
+				initial="hidden"
+				animate="visible"
+			/>
 			<div className={css.rating}>{Number(item.rating).toFixed()}/100</div>
 			<div className={css.title}>{item.title}</div>
 			<IconBtn className={css.back} onClick={backItem} />
@@ -48,4 +57,14 @@ type Item = {
 	title: string;
 	rating: string;
 	img: string;
+};
+
+const variants: Variants = {
+	hidden: {
+		opacity: 0
+	},
+	visible: {
+		opacity: 1,
+		transition: { duration: 1.5 }
+	}
 };
