@@ -1,6 +1,5 @@
 import { joinClass } from "../../../utils/joinClass";
 import { NETWORKS } from "./consts";
-
 import css from "./css.module.css";
 
 type Props = {
