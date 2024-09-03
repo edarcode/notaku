@@ -1,27 +1,8 @@
-.slider {
-	position: relative;
-}
-
-.slider .btn_left,
-.slider .btn_right {
-	position: absolute;
-	top: 0;
-}
-
-.slider .btn_left {
-	transform: rotate(180deg);
-	left: 0;
-}
-
-.slider .btn_right {
-	right: 0;
-}
-
-.top {
+.loading,
+.err,
+.empty {
+	height: 600px;
 	display: flex;
-	overflow-x: hidden;
-}
-
-.anime {
-	min-width: 100%;
+	justify-content: center;
+	align-items: center;
 }

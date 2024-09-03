@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import Slider from "../../../../components/sliders/Slider/Slider";
 import { getTopAnimes } from "./services/getTopAnimes";
+import Spinner from "../../../../components/spinners/Spinner/Spinner";
+import css from "./css.module.css";
 
 export default function TopAnimes() {
 	const {
@@ -12,9 +14,15 @@ export default function TopAnimes() {
 		queryFn: getTopAnimes
 	});
 
-	if (isError) return <div>Error</div>;
-	if (isLoading) return <div>Cargando...</div>;
-	if (!topAnimes || !topAnimes.length) return <div>No hay animes</div>;
+	if (isError) return <div className={css.err}>Error crgando animes</div>;
+	if (isLoading)
+		return (
+			<div className={css.loading}>
+				<Spinner />
+			</div>
+		);
+	if (!topAnimes || !topAnimes.length)
+		return <div className={css.empty}>No hay animes</div>;
 
 	return (
 		<Slider
