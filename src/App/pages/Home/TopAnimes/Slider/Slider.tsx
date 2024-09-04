@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import IconBtn from "../../buttons/IconBtn/IconBtn";
+import IconBtn from "../../../../../components/buttons/IconBtn/IconBtn";
 import css from "./css.module.css";
 import { motion, Variants } from "framer-motion";
 

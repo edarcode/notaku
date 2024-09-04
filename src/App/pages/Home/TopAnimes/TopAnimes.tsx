@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import Slider from "../../../../components/sliders/Slider/Slider";
+import Slider from "./Slider/Slider";
 import { getTopAnimes } from "./services/getTopAnimes";
 import Spinner from "../../../../components/spinners/Spinner/Spinner";
 import css from "./css.module.css";
