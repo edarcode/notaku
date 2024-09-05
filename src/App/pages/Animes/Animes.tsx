@@ -5,6 +5,7 @@ import Spinner from "../../../components/spinners/Spinner/Spinner";
 import { KITSU } from "../../../kitsu/urls";
 import { useScrollEnd } from "../../../hooks/useScrollEnd";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Animes() {
 	const isScrollAtEnd = useScrollEnd(50);
@@ -34,7 +35,12 @@ export default function Animes() {
 		<section className={css.animes}>
 			{data.pages.map(page =>
 				page.animes.map(anime => (
-					<div key={anime.id} className={css.anime}>
+					<motion.div
+						key={anime.id}
+						className={css.anime}
+						whileHover={{ scale: 1.05 }}
+						transition={{ duration: 0.3 }}
+					>
 						<div className={css.title}>{anime.title}</div>
 						<img
 							className={css.img}
@@ -42,7 +48,7 @@ export default function Animes() {
 							alt={anime.title}
 							loading="lazy"
 						/>
-					</div>
+					</motion.div>
 				))
 			)}
 		</section>
