@@ -10,7 +10,7 @@ export default function Slider({ content }: Props) {
 	useEffect(() => {
 		const intervalId = setInterval(() => {
 			nextItem();
-		}, 4000);
+		}, 7000);
 
 		return () => clearInterval(intervalId);
 	}, []);
