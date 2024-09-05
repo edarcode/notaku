@@ -4,7 +4,13 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./App/router/router";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			refetchOnWindowFocus: false // default: true
+		}
+	}
+});
 
 createRoot(document.querySelector("#root")!).render(
 	<QueryClientProvider client={queryClient}>
