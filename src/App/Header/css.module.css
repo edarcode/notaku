@@ -1,6 +1,9 @@
 .header {
 	background-color: var(--bg-surf);
 	padding: var(--md) var(--lg);
+	position: sticky;
+	top: 0;
+	z-index: 20;
 }
 
 .nav {

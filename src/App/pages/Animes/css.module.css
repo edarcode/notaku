@@ -6,6 +6,8 @@
 	max-width: 1850px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: var(--lg);
+	padding-bottom: var(--lg);
 }
 
 .loading {
