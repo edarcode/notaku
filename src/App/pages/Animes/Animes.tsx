@@ -38,8 +38,8 @@ export default function Animes() {
 					<motion.div
 						key={anime.id}
 						className={css.anime}
-						whileHover={{ scale: 1.05 }}
-						transition={{ duration: 0.3 }}
+						whileHover={{ scale: 1.02 }}
+						transition={{ duration: 0.25 }}
 					>
 						<div className={css.title}>{anime.title}</div>
 						<img
