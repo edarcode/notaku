@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import IconBtn from "../../../../../components/buttons/IconBtn/IconBtn";
 import css from "./css.module.css";
 import { motion, Variants } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ANIME_DETAILS } from "../../../../router/children";
 
 export default function Slider({ content }: Props) {
 	const [index, setIndex] = useState(0);
@@ -31,15 +33,17 @@ export default function Slider({ content }: Props) {
 
 	return (
 		<article className={css.slider}>
-			<motion.img
-				key={item.id}
-				className={css.img}
-				src={item.img}
-				alt={item.title}
-				variants={variants}
-				initial="hidden"
-				animate="visible"
-			/>
+			<Link to={ANIME_DETAILS.to + item.id}>
+				<motion.img
+					key={item.id}
+					className={css.img}
+					src={item.img}
+					alt={item.title}
+					variants={variants}
+					initial="hidden"
+					animate="visible"
+				/>
+			</Link>
 			<div className={css.rating}>{Number(item.rating).toFixed()}/100</div>
 			<div className={css.title}>{item.title}</div>
 			<IconBtn className={css.back} onClick={backItem} />
