@@ -1,12 +1,13 @@
 import { EdarErr } from "../../../../err/EdarErr";
 import { KITSU } from "../../../../kitsu/urls";
 
-export const getAnimes = async (url?: string) => {
+export const getAnimes = async (signal: AbortSignal, url?: string) => {
 	const res = await fetch(url ? url : KITSU.animes, {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json"
-		}
+		},
+		signal
 	});
 
 	if (!res.ok) {

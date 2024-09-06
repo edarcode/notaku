@@ -13,7 +13,7 @@ export default function Animes() {
 	const isScrollAtEnd = useScrollEnd(50);
 	const { isLoading, isError, data, fetchNextPage } = useInfiniteQuery({
 		queryKey: ["kitsuAnimes"],
-		queryFn: ({ pageParam }) => getAnimes(pageParam),
+		queryFn: ({ pageParam, signal }) => getAnimes(signal, pageParam),
 		initialPageParam: KITSU.animes,
 		getNextPageParam: lastPage => lastPage.nextPage
 	});
@@ -49,7 +49,7 @@ export default function Animes() {
 						<Link to={ANIME_DETAILS.to + anime.id}>
 							<img
 								className={css.img}
-								src={anime.posterImage.small}
+								src={anime.posterImage?.small}
 								alt={anime.title}
 								loading="lazy"
 							/>
