@@ -6,6 +6,8 @@ import { KITSU } from "../../../kitsu/urls";
 import { useScrollEnd } from "../../../hooks/useScrollEnd";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ANIME_DETAILS } from "../../router/children";
 
 export default function Animes() {
 	const isScrollAtEnd = useScrollEnd(50);
@@ -29,8 +31,8 @@ export default function Animes() {
 				<Spinner />
 			</div>
 		);
-	if (!data) return <div>No hay datos</div>;
 
+	if (!data) return <div>No hay datos</div>;
 	return (
 		<section className={css.animes}>
 			{data.pages.map(page =>
@@ -44,12 +46,14 @@ export default function Animes() {
 						<div className={css.title}>
 							{anime.title.split(" ", 2).join(" ")}
 						</div>
-						<img
-							className={css.img}
-							src={anime.posterImage.small}
-							alt={anime.title}
-							loading="lazy"
-						/>
+						<Link to={ANIME_DETAILS.to + anime.id}>
+							<img
+								className={css.img}
+								src={anime.posterImage.small}
+								alt={anime.title}
+								loading="lazy"
+							/>
+						</Link>
 					</motion.div>
 				))
 			)}
