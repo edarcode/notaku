@@ -42,8 +42,8 @@
 	background-color: var(--pri);
 	padding: var(--sm);
 	border-radius: var(--sm);
-	line-height: 8px;
 	margin-right: var(--sm);
+	line-height: 9px;
 }
 
 .rating {

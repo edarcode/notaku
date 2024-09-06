@@ -41,7 +41,9 @@ export default function Animes() {
 						whileHover={{ scale: 1.02 }}
 						transition={{ duration: 0.25 }}
 					>
-						<div className={css.title}>{anime.title}</div>
+						<div className={css.title}>
+							{anime.title.split(" ", 2).join(" ")}
+						</div>
 						<img
 							className={css.img}
 							src={anime.posterImage.small}
