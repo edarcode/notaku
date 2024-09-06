@@ -1,8 +1,20 @@
 import { EdarErr } from "../../../../err/EdarErr";
 import { KITSU } from "../../../../kitsu/urls";
 
-export const getAnimes = async (signal: AbortSignal, url?: string) => {
-	const res = await fetch(url ? url : KITSU.animes, {
+type Filters = {
+	genres?: string;
+	text?: string;
+	year?: number;
+};
+
+export const getAnimes = async (
+	signal: AbortSignal,
+	url?: string,
+	filters?: Filters
+) => {
+	const finalUrl = addFilters(url ? url : KITSU.animes, filters);
+
+	const res = await fetch(finalUrl, {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json"
@@ -21,6 +33,19 @@ export const getAnimes = async (signal: AbortSignal, url?: string) => {
 	const kitsuMappedRes = mapKitsuRes(kitsuRes);
 
 	return kitsuMappedRes;
+};
+
+const addFilters = (url: string, filters?: Filters) => {
+	if (!filters) return url;
+	let newUrl = url;
+	const { text, genres, year } = filters;
+
+	if (text) newUrl = newUrl.concat(`&filter[text]=${text}`);
+	if (genres) newUrl = newUrl.concat(`&filter[genres]=${genres}`);
+
+	if (year) newUrl = newUrl.concat(`&filter[year]=${year}`);
+
+	return newUrl;
 };
 
 const mapKitsuRes = (kitsuRes: KitsuAnimeResponse) => {
