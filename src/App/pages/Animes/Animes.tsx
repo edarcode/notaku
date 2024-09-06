@@ -13,8 +13,7 @@ export default function Animes() {
 	const isScrollAtEnd = useScrollEnd(50);
 	const { isLoading, isError, data, fetchNextPage } = useInfiniteQuery({
 		queryKey: ["kitsuAnimes"],
-		queryFn: ({ pageParam: url, signal }) =>
-			getAnimes(signal, url, { year: 2020 }),
+		queryFn: ({ pageParam: url, signal }) => getAnimes(signal, url),
 		initialPageParam: KITSU.animes,
 		getNextPageParam: lastPage => lastPage.nextPage
 	});

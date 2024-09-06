@@ -5,6 +5,7 @@ type Filters = {
 	genres?: string;
 	text?: string;
 	year?: number;
+	status?: keyof typeof KITSU.animeStatus;
 };
 
 export const getAnimes = async (
@@ -38,11 +39,11 @@ export const getAnimes = async (
 const addFilters = (url: string, filters?: Filters) => {
 	if (!filters) return url;
 	let newUrl = url;
-	const { text, genres, year } = filters;
+	const { text, genres, year, status } = filters;
 
 	if (text) newUrl = newUrl.concat(`&filter[text]=${text}`);
 	if (genres) newUrl = newUrl.concat(`&filter[genres]=${genres}`);
-
+	if (status) newUrl = newUrl.concat(`&filter[status]=${status}`);
 	if (year) newUrl = newUrl.concat(`&filter[year]=${year}`);
 
 	return newUrl;
