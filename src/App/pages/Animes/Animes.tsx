@@ -25,14 +25,8 @@ export default function Animes() {
 	}, [isScrollAtEnd]);
 
 	if (isError) return <div className={css.err}>Error cargando animes</div>;
-	if (isLoading)
-		return (
-			<div className={css.loading}>
-				<Spinner />
-			</div>
-		);
-
-	if (!data) return <div>No hay datos</div>;
+	if (isLoading) return <Spinner className={css.loading} />;
+	if (!data) return <div className={css.empty}>No hay datos</div>;
 
 	return (
 		<section className={css.animes}>

@@ -10,7 +10,9 @@
 	padding-bottom: var(--lg);
 }
 
-.loading {
+.loading,
+.err,
+.empty {
 	position: absolute;
 	top: 50%;
 	left: 50%;
