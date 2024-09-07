@@ -2,16 +2,21 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import { useScrollEnd } from "../../../../hooks/useScrollEnd";
 import { getAnimes } from "../services/getAnimes";
 import { KITSU } from "../../../../kitsu/urls";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+type Filters = { title?: string } | undefined;
 
 export const useAnimes = () => {
 	const isScrollAtEnd = useScrollEnd(50);
-	const { isLoading, isError, data, fetchNextPage } = useInfiniteQuery({
-		queryKey: ["kitsuAnimes"],
-		queryFn: ({ pageParam: url, signal }) => getAnimes(signal, url),
-		initialPageParam: KITSU.animes,
-		getNextPageParam: lastPage => lastPage.nextPage
-	});
+	const [filters, setFilters] = useState<Filters>();
+	const { isLoading, isError, data, fetchNextPage, refetch } = useInfiniteQuery(
+		{
+			queryKey: ["kitsuAnimes", filters],
+			queryFn: ({ pageParam: url, signal }) => getAnimes(signal, url, filters),
+			initialPageParam: KITSU.animes,
+			getNextPageParam: lastPage => lastPage.nextPage
+		}
+	);
 
 	useEffect(() => {
 		if (isScrollAtEnd) {
@@ -19,5 +24,14 @@ export const useAnimes = () => {
 		}
 	}, [isScrollAtEnd]);
 
-	return { isLoading, isError, kitsuAnimes: data };
+	useEffect(() => {
+		if (!filters) return;
+		refetch();
+	}, [filters]);
+
+	const searchAnimes = (filters: Filters) => {
+		setFilters(filters);
+	};
+
+	return { isLoading, isError, kitsuAnimes: data, searchAnimes };
 };

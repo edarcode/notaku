@@ -4,8 +4,11 @@ import { useForm } from "react-hook-form";
 import { filterSchema } from "../filterSchema";
 import InputText from "../../../../components/inputs/InputText/InputText";
 import Btn from "../../../../components/buttons/Btn/Btn";
+import { useAnimes } from "../hooks/useAnimes";
 
 export default function AnimeFilters() {
+	const { searchAnimes } = useAnimes();
+
 	const {
 		register,
 		handleSubmit,
@@ -15,7 +18,7 @@ export default function AnimeFilters() {
 	return (
 		<form
 			className={css.form}
-			onSubmit={handleSubmit(data => console.log(data))}
+			onSubmit={handleSubmit(filters => searchAnimes(filters))}
 		>
 			<InputText {...register("title")} />
 			<Btn disabled={Object.keys(errors).length > 0}>Filtrar</Btn>
