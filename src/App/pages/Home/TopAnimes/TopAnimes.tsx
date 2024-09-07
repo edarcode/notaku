@@ -4,13 +4,15 @@ import { getTopAnimes } from "./services/getTopAnimes";
 import Spinner from "../../../../components/spinners/Spinner/Spinner";
 import css from "./css.module.css";
 
+const TOP_ANIMES = ["topAnimes"] as const;
+
 export default function TopAnimes() {
 	const {
 		isLoading,
 		isError,
 		data: topAnimes
 	} = useQuery({
-		queryKey: ["topAnimes"],
+		queryKey: TOP_ANIMES,
 		queryFn: getTopAnimes
 	});
 

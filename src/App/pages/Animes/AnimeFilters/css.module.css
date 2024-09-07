@@ -1,0 +1,6 @@
+.form {
+	padding-top: var(--lg);
+	display: flex;
+	justify-content: center;
+	gap: var(--md);
+}
