@@ -7,7 +7,7 @@ import Btn from "../../../../components/buttons/Btn/Btn";
 import { useAnimes } from "../hooks/useAnimes";
 
 export default function AnimeFilters() {
-	const { searchAnimes } = useAnimes();
+	const { filterAnimes } = useAnimes();
 
 	const {
 		register,
@@ -18,7 +18,7 @@ export default function AnimeFilters() {
 	return (
 		<form
 			className={css.form}
-			onSubmit={handleSubmit(filters => searchAnimes(filters))}
+			onSubmit={handleSubmit(filters => filterAnimes(filters))}
 		>
 			<InputText {...register("title")} />
 			<Btn disabled={Object.keys(errors).length > 0}>Filtrar</Btn>
