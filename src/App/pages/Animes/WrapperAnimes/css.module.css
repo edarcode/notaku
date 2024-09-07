@@ -1,0 +1,61 @@
+.animes {
+	display: flex;
+	gap: var(--lg);
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 1620px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: var(--lg);
+	padding-bottom: var(--lg);
+}
+
+.loading,
+.err,
+.empty {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.anime {
+	position: relative;
+	width: 284px;
+	height: 402px;
+}
+
+.img {
+	aspect-ratio: 142∶201;
+}
+
+.rating,
+.status,
+.title {
+	position: absolute;
+}
+
+.title {
+	bottom: var(--sm);
+	left: var(--sm);
+	font-weight: 700;
+	color: whitesmoke;
+	font-size: 10px;
+	background-color: var(--pri);
+	padding: var(--sm);
+	border-radius: var(--sm);
+	margin-right: var(--sm);
+	line-height: 9px;
+}
+
+.rating {
+	top: var(--sm);
+	right: var(--sm);
+}
+
+.status {
+	font-weight: 700;
+	color: var(--hl);
+	top: var(--sm);
+	left: var(--sm);
+}
