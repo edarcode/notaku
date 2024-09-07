@@ -13,8 +13,6 @@ export default function Animes() {
 		formState: { errors }
 	} = useForm({ resolver: zodResolver(filterSchema) });
 
-	console.log(errors);
-
 	return (
 		<section className={css.animes}>
 			<form
