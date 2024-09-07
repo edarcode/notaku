@@ -15,7 +15,7 @@ export default function InputText(props: Props) {
 		...extraProps
 	} = props;
 
-	const finalClass = joinClass([css.label, className]);
+	const finalClass = joinClass([className, css.label]);
 
 	return (
 		<label className={finalClass}>

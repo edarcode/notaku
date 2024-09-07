@@ -1,0 +1,8 @@
+.animes {
+	padding-top: var(--lg);
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+}
