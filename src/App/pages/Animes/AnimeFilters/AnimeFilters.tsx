@@ -4,11 +4,10 @@ import { useForm } from "react-hook-form";
 import { filterSchema } from "../filterSchema";
 import InputText from "../../../../components/inputs/InputText/InputText";
 import Btn from "../../../../components/buttons/Btn/Btn";
-import { useAnimes } from "../hooks/useAnimes";
+import { useSearchParams } from "react-router-dom";
 
 export default function AnimeFilters() {
-	const { filterAnimes } = useAnimes();
-
+	const [params, setParams] = useSearchParams();
 	const {
 		register,
 		handleSubmit,
@@ -18,7 +17,11 @@ export default function AnimeFilters() {
 	return (
 		<form
 			className={css.form}
-			onSubmit={handleSubmit(filters => filterAnimes(filters))}
+			onSubmit={handleSubmit((data: any) => {
+				const querys = new URLSearchParams(params);
+				querys.set("text", data.title);
+				setParams(querys);
+			})}
 		>
 			<InputText {...register("title")} />
 			<Btn disabled={Object.keys(errors).length > 0}>Filtrar</Btn>
