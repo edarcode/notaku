@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
 import Spinner from "../../../../components/spinners/Spinner/Spinner";
-import { useAnimes } from "../hooks/useAnimes";
 import css from "./css.module.css";
 import { ANIME_DETAILS } from "../../../router/children";
 import { motion } from "framer-motion";
+import { KitsuAnimePages } from "../hooks/useAnimes";
 
-export default function WrapperAnimes() {
-	const { isError, isLoading, kitsuAnimes } = useAnimes();
-
+export default function WrapperAnimes({
+	isError,
+	isLoading,
+	kitsuAnimePages
+}: Props) {
 	if (isError) return <div className={css.err}>Error cargando datos</div>;
 	if (isLoading) return <Spinner className={css.loading} />;
-	if (!kitsuAnimes) return <div className={css.empty}>No hay datos</div>;
+	if (!kitsuAnimePages) return <div className={css.empty}>No hay datos</div>;
 
 	return (
 		<div className={css.wrapper}>
-			{kitsuAnimes.pages.map(page =>
+			{kitsuAnimePages.map(page =>
 				page.animes.map(anime => (
 					<motion.div
 						key={anime.id}
@@ -39,3 +41,9 @@ export default function WrapperAnimes() {
 		</div>
 	);
 }
+
+type Props = {
+	isError: boolean;
+	isLoading: boolean;
+	kitsuAnimePages: KitsuAnimePages;
+};

@@ -4,10 +4,8 @@ import { useForm } from "react-hook-form";
 import { filterSchema } from "../filterSchema";
 import InputText from "../../../../components/inputs/InputText/InputText";
 import Btn from "../../../../components/buttons/Btn/Btn";
-import { useAnimes } from "../hooks/useAnimes";
 
-export default function AnimeFilters() {
-	const { filterAnimes } = useAnimes();
+export default function AnimeFilters({ filterAnimes }: Props) {
 	const {
 		register,
 		handleSubmit,
@@ -25,4 +23,6 @@ export default function AnimeFilters() {
 	);
 }
 
-// type Filters = z.infer<typeof filterSchema>
+type Props = {
+	filterAnimes: ({}) => void;
+};

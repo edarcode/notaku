@@ -133,7 +133,7 @@ type Titles = {
 	ja_jp: string;
 };
 
-type Image = {
+export type Image = {
 	tiny: string;
 	small: string;
 	medium: string;
