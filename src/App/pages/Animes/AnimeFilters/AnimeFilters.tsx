@@ -11,6 +11,7 @@ export default function AnimeFilters() {
 		handleSubmit,
 		formState: { errors }
 	} = useForm({ resolver: zodResolver(filterSchema) });
+
 	return (
 		<form
 			className={css.form}

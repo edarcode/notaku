@@ -6,15 +6,15 @@ import { ANIME_DETAILS } from "../../../router/children";
 import { motion } from "framer-motion";
 
 export default function WrapperAnimes() {
-	const { isError, isLoading, data } = useAnimes();
+	const { isError, isLoading, kitsuAnimes } = useAnimes();
 
 	if (isError) return <div className={css.err}>Error cargando datos</div>;
 	if (isLoading) return <Spinner className={css.loading} />;
-	if (!data) return <div className={css.empty}>No hay datos</div>;
+	if (!kitsuAnimes) return <div className={css.empty}>No hay datos</div>;
 
 	return (
 		<div className={css.wrapper}>
-			{data.pages.map(page =>
+			{kitsuAnimes.pages.map(page =>
 				page.animes.map(anime => (
 					<motion.div
 						key={anime.id}

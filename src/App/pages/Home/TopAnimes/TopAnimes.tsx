@@ -4,19 +4,17 @@ import { getTopAnimes } from "./services/getTopAnimes";
 import Spinner from "../../../../components/spinners/Spinner/Spinner";
 import css from "./css.module.css";
 
-const TOP_ANIMES = ["topAnimes"] as const;
-
 export default function TopAnimes() {
 	const {
 		isLoading,
 		isError,
 		data: topAnimes
 	} = useQuery({
-		queryKey: TOP_ANIMES,
+		queryKey: ["topAnimes"],
 		queryFn: getTopAnimes
 	});
 
-	if (isError) return <div className={css.err}>Error crgando animes</div>;
+	if (isError) return <div className={css.err}>Error cargando animes</div>;
 	if (isLoading)
 		return (
 			<div className={css.loading}>
