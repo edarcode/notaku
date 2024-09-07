@@ -1,9 +1,10 @@
+import { forwardRef } from "react";
 import css from "./css.module.css";
 import Input from "./Input/Input";
 import { Props } from "./types";
 import { joinClass } from "./utils/joinClass";
 
-export default function InputText(props: Props) {
+export default forwardRef(function InputText(props: Props, ref) {
 	const {
 		className,
 		title,
@@ -23,6 +24,7 @@ export default function InputText(props: Props) {
 
 			<Input
 				{...extraProps}
+				ref={ref}
 				async={async}
 				err={err}
 				loading={loading}
@@ -33,4 +35,4 @@ export default function InputText(props: Props) {
 			{err && <span className={css.err}>{err}</span>}
 		</label>
 	);
-}
+});

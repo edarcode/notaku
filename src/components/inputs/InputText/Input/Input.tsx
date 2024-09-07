@@ -2,8 +2,9 @@ import { joinClass } from "../utils/joinClass";
 import State from "../State/State";
 import css from "./css.module.css";
 import { KINDS } from "./kinds";
+import { forwardRef } from "react";
 
-export default function Input(props: Props) {
+export default forwardRef(function Input(props: Props, ref: any) {
 	const { async, err, loading, success, kind, ...extraProps } = props;
 
 	const finalClassInput = joinClass([
@@ -18,13 +19,14 @@ export default function Input(props: Props) {
 			<input
 				placeholder="✏️"
 				{...extraProps}
+				ref={ref}
 				type="text"
 				className={finalClassInput}
 			></input>
 			<State async={async} err={err} loading={loading} success={success} />
 		</label>
 	);
-}
+});
 
 interface Props {
 	async?: boolean;
