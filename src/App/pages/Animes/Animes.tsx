@@ -8,9 +8,9 @@ import { useAnimes } from "./hooks/useAnimes";
 export default function Animes() {
 	const { isError, isLoading, data } = useAnimes();
 
-	if (isError) return <div className={css.err}>Error cargando animes</div>;
+	if (isError) return <div className={css.err}>Error cargando datos</div>;
 	if (isLoading) return <Spinner className={css.loading} />;
-	if (!data) return <div className={css.empty}>No hay datos</div>;
+	if (!data) return <div className={css.empty}>Ningún recurso coincide</div>;
 
 	return (
 		<section className={css.animes}>
