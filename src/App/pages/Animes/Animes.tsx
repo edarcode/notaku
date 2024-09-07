@@ -1,28 +1,12 @@
 import css from "./css.module.css";
-import { useInfiniteQuery } from "@tanstack/react-query";
-import { getAnimes } from "./services/getAnimes";
 import Spinner from "../../../components/spinners/Spinner/Spinner";
-import { KITSU } from "../../../kitsu/urls";
-import { useScrollEnd } from "../../../hooks/useScrollEnd";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ANIME_DETAILS } from "../../router/children";
+import { useAnimes } from "./hooks/useAnimes";
 
 export default function Animes() {
-	const isScrollAtEnd = useScrollEnd(50);
-	const { isLoading, isError, data, fetchNextPage } = useInfiniteQuery({
-		queryKey: ["kitsuAnimes"],
-		queryFn: ({ pageParam: url, signal }) => getAnimes(signal, url),
-		initialPageParam: KITSU.animes,
-		getNextPageParam: lastPage => lastPage.nextPage
-	});
-
-	useEffect(() => {
-		if (isScrollAtEnd) {
-			fetchNextPage();
-		}
-	}, [isScrollAtEnd]);
+	const { isError, isLoading, data } = useAnimes();
 
 	if (isError) return <div className={css.err}>Error cargando animes</div>;
 	if (isLoading) return <Spinner className={css.loading} />;
