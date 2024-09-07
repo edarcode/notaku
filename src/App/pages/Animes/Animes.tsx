@@ -33,6 +33,7 @@ export default function Animes() {
 		);
 
 	if (!data) return <div>No hay datos</div>;
+
 	return (
 		<section className={css.animes}>
 			{data.pages.map(page =>

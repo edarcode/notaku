@@ -3,7 +3,7 @@ import { KITSU } from "../../../../kitsu/urls";
 
 type Filters = {
 	genres?: string;
-	text?: string;
+	title?: string;
 	year?: number;
 	status?: keyof typeof KITSU.animeStatus;
 	sorting?: keyof typeof KITSU.animeSorting;
@@ -40,9 +40,9 @@ export const getAnimes = async (
 const addFilters = (url: string, filters?: Filters) => {
 	if (!filters) return url;
 	let newUrl = url;
-	const { text, genres, year, status, sorting } = filters;
+	const { title, genres, year, status, sorting } = filters;
 
-	if (text) newUrl = newUrl.concat(`&filter[text]=${text}`);
+	if (title) newUrl = newUrl.concat(`&filter[text]=${title}`);
 	if (genres) newUrl = newUrl.concat(`&filter[genres]=${genres}`);
 	if (status) newUrl = newUrl.concat(`&filter[status]=${status}`);
 	if (year) newUrl = newUrl.concat(`&filter[year]=${year}`);
