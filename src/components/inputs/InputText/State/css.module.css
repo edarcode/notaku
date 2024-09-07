@@ -6,7 +6,7 @@
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	right: calc(var(--md) / 2);
+	right: var(--md);
 }
 
 .err {
