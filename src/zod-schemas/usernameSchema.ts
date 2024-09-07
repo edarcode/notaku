@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { REGEX } from "../../../only-chat/src/regex/regex";
+import { REGEX } from "../regex/regex";
 
 export const usernameSchema = z
 	.string()
