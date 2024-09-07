@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { filterSchema } from "../filterSchema";
 import InputText from "../../../../components/inputs/InputText/InputText";
 import Btn from "../../../../components/buttons/Btn/Btn";
+import { FilterAnimes } from "../hooks/useAnimes";
 
 export default function AnimeFilters({ filterAnimes }: Props) {
 	const {
@@ -23,6 +24,4 @@ export default function AnimeFilters({ filterAnimes }: Props) {
 	);
 }
 
-type Props = {
-	filterAnimes: ({}) => void;
-};
+type Props = { filterAnimes: FilterAnimes };

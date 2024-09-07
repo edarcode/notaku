@@ -33,9 +33,11 @@ export const useAnimes = () => {
 	};
 };
 
-type Filters = z.infer<typeof filterSchema>;
-
 export type KitsuAnimePages = AnimePages | undefined;
+
+export type FilterAnimes = (filters: Filters) => void;
+
+type Filters = z.infer<typeof filterSchema>;
 
 type AnimePages = { animes: Animes; prevPage: string; nextPage: string }[];
 
