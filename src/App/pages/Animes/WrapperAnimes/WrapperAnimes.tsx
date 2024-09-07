@@ -13,7 +13,7 @@ export default function WrapperAnimes() {
 	if (!data) return <div className={css.empty}>No hay datos</div>;
 
 	return (
-		<div className={css.animes}>
+		<div className={css.wrapper}>
 			{data.pages.map(page =>
 				page.animes.map(anime => (
 					<motion.div

@@ -1,4 +1,4 @@
-.animes {
+.wrapper {
 	display: flex;
 	gap: var(--lg);
 	flex-wrap: wrap;
