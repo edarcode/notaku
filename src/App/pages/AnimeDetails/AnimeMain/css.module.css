@@ -7,14 +7,15 @@
 	display: grid;
 	gap: var(--md);
 	background-color: var(--bg-surf);
-	padding: var(--md);
+	padding: var(--lg);
 	border-radius: var(--md);
 }
 
 .episodeCount {
 	position: absolute;
-	top: var(--md);
-	right: var(--md);
+	top: var(--lg);
+	right: var(--lg);
+	font-weight: 700;
 }
 
 .times {
@@ -22,4 +23,14 @@
 	gap: var(--sm);
 	justify-self: end;
 	text-align: end;
+	font-size: smaller;
+}
+
+.status {
+	position: absolute;
+	bottom: var(--lg);
+	left: var(--lg);
+	color: whitesmoke;
+	font-weight: 700;
+	text-transform: uppercase;
 }

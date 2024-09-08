@@ -10,7 +10,8 @@ export default function AnimeMain({ anime }: Props) {
 				<h4>Sinopsis</h4>
 				<Genres genres={anime.genres} />
 				<p>{anime.synopsis}</p>
-				<span className={css.episodeCount}>Total cap {anime.episodeCount}</span>
+				<span className={css.episodeCount}>{anime.episodeCount} CAP</span>
+				<div className={css.status}>{anime.status}</div>
 				<div className={css.times}>
 					<time dateTime={anime.startDate}>
 						Inició {formatDate(anime.startDate as string)}

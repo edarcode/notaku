@@ -5,7 +5,6 @@ export default function AnimeAside({ anime }: Props) {
 	return (
 		<aside className={css.aside}>
 			<img src={anime.posterImage?.small} alt={anime.title} />
-			<div>{anime.status}</div>
 			<div>{anime.showType}</div>
 		</aside>
 	);
