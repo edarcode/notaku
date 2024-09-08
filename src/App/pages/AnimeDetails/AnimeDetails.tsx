@@ -1,11 +1,12 @@
 import { formatDate } from "../../../utils/formatDate";
+import Genres from "./Genres/Genres";
 import { useAnimeById } from "./hooks/useAnimeById";
 
 export default function AnimeDetails() {
 	const { isError, isLoading, anime } = useAnimeById();
 
 	if (isError) return <div>Error</div>;
-	if (isLoading) return <div>Loading</div>;
+	if (isLoading) return <div>Loading...</div>;
 	if (!anime) return <div>Anime no encontrado</div>;
 
 	return (
@@ -21,6 +22,7 @@ export default function AnimeDetails() {
 			<div>{anime.favoritesCount}</div>
 			<div>{formatDate(anime.startDate)}</div>
 			<div>{formatDate(anime.endDate)}</div>
+			<Genres genres={anime.genres} />
 		</div>
 	);
 }

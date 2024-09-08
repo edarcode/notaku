@@ -21,9 +21,10 @@ export const fetchAnimeById = async (signal: AbortSignal, id?: string) => {
 		});
 	}
 
-	const kitsuRes = await res.json();
+	const kitsuRes: KitsuRes = await res.json();
+	const anime = mapKitsuRes(kitsuRes);
 
-	return mapKitsuRes(kitsuRes);
+	return anime;
 };
 
 const mapKitsuRes = (data: KitsuRes) => {
@@ -43,7 +44,7 @@ const mapKitsuRes = (data: KitsuRes) => {
 		youtubeVideoId: anime.attributes.youtubeVideoId,
 		showType: anime.attributes.showType,
 		favoritesCount: anime.attributes.favoritesCount,
-		genres: data.included.map(genre => ({
+		genres: data?.included?.map(genre => ({
 			id: genre.id,
 			name: genre.attributes.name
 		}))
