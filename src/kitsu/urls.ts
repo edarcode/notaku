@@ -21,7 +21,10 @@ class Kitsu {
 		{ value: "horror", display: "Horror" },
 		{ value: "thriller", display: "Thriller" },
 		{ value: "romance", display: "Romance" },
-		{ value: "ecchi", display: "Ecchi" }
+		{ value: "ecchi", display: "Ecchi" },
+		{ value: "demons", display: "Demons" },
+		{ value: "harem", display: "Harem" },
+		{ value: "school", display: "School" }
 	];
 
 	animeStatus = [
