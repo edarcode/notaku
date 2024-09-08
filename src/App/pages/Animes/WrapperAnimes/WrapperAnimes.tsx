@@ -34,7 +34,7 @@ export default function WrapperAnimes({
 							/>
 						</Link>
 						<div className={css.title}>
-							{anime.title.split(" ", 2).join(" ")}
+							{anime.title.split(" ", 4).join(" ")}
 						</div>
 					</motion.div>
 				))
