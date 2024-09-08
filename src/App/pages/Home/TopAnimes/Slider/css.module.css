@@ -22,9 +22,8 @@
 }
 
 .rating {
-	bottom: var(--sm);
-	right: var(--lg);
-	background-color: var(--pri);
+	top: var(--sm);
+	right: var(--sm);
 	padding: var(--sm);
 	border-radius: var(--md);
 	line-height: 25px;

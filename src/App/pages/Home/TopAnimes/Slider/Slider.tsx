@@ -44,7 +44,7 @@ export default function Slider({ content }: Props) {
 					animate="visible"
 				/>
 			</Link>
-			<div className={css.rating}>{Number(item.rating).toFixed()}/100</div>
+			<div className={css.rating}>⭐{Number(item.rating).toFixed()}</div>
 			<div className={css.title}>{item.title}</div>
 			<IconBtn className={css.back} onClick={backItem} />
 			<IconBtn className={css.next} onClick={nextItem} />
