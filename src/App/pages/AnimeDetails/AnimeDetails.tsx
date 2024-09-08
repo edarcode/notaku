@@ -12,20 +12,32 @@ export default function AnimeDetails() {
 	if (!anime) return <div className={css.empty}>No se encontró el anime</div>;
 
 	return (
-		<article>
-			<img src={anime.coverImage?.original} alt={anime.title} />
-			<img src={anime.posterImage?.small} alt={anime.title} />
-			<div>{anime.title}</div>
-			<div>{anime.synopsis}</div>
-			<div>{anime.showType}</div>
-			<div>⭐{Number(anime.rating).toFixed()}</div>
-			<div>{anime.popularity}</div>
-			<div>{anime.episodeCount}</div>
-			<div>{anime.favoritesCount}</div>
-			<div>{formatDate(anime.startDate as string)}</div>
-			<div>{formatDate(anime.endDate as string)}</div>
-			<div>{anime.status}</div>
-			<Genres genres={anime.genres} />
+		<article className={css.detail}>
+			<header>
+				<img src={anime.coverImage?.original} alt={anime.title} />
+				<div>{anime.title}</div>
+				<div>⭐{Number(anime.rating).toFixed()}</div>
+				<div>{anime.popularity}</div>
+				<div>{anime.favoritesCount}</div>
+			</header>
+			<aside>
+				<img src={anime.posterImage?.small} alt={anime.title} />
+				<div>{anime.status}</div>
+				<div>{anime.showType}</div>
+			</aside>
+			<main>
+				<Genres genres={anime.genres} />
+				<div>{anime.synopsis}</div>
+				<div>{anime.episodeCount}</div>
+				<span>
+					<time dateTime={anime.startDate}>
+						{formatDate(anime.startDate as string)}
+					</time>
+					<time dateTime={anime.endDate as string}>
+						{formatDate(anime.endDate as string)}
+					</time>
+				</span>
+			</main>
 		</article>
 	);
 }

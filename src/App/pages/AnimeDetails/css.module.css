@@ -6,3 +6,8 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+.detail {
+	display: grid;
+	gap: var(--xl);
+}
