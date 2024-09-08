@@ -4,10 +4,15 @@
 }
 
 .genre {
-	background-color: var(--pri);
-	color: whitesmoke;
+	background-color: var(--bg-surf);
 	line-height: 16px;
 	padding: var(--sm) var(--md);
 	font-weight: 700;
 	border-radius: var(--sm);
+}
+
+@media (prefers-color-scheme: light) {
+	.genre {
+		background-color: var(--l-bg-surf);
+	}
 }
