@@ -39,9 +39,8 @@
 	bottom: var(--sm);
 	left: var(--sm);
 	font-weight: 700;
-	color: whitesmoke;
 	font-size: 10px;
-	background-color: var(--pri);
+	background-color: var(--bg-surf);
 	padding: var(--sm);
 	border-radius: var(--sm);
 	margin-right: var(--sm);
@@ -59,4 +58,10 @@
 	color: var(--hl);
 	top: var(--sm);
 	left: var(--sm);
+}
+
+@media (prefers-color-scheme: light) {
+	.title {
+		background-color: var(--l-bg-surf);
+	}
 }
