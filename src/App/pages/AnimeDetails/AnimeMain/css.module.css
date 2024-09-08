@@ -28,6 +28,7 @@
 	display: grid;
 	gap: var(--sm);
 	justify-self: end;
+	align-self: end;
 	text-align: end;
 	font-size: smaller;
 	font-family: "Righteous", sans-serif;

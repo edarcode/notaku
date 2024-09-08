@@ -4,7 +4,7 @@
 
 .cover {
 	width: 100%;
-	height: calc(50vh - 80px); /* 80px altura del header*/
+	height: 55vh;
 	object-fit: cover;
 }
 
