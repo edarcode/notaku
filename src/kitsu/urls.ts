@@ -24,7 +24,7 @@ class Kitsu {
 	];
 
 	animeSorting = [
-		{ value: "", display: "Defecto" },
+		{ value: "", display: "🎬 Defecto" },
 		{ value: "-averageRating", display: "⭐ Calificación" },
 		{ value: "popularityRank", display: "👀 Popularidad" },
 		{ value: "-startDate", display: "🗓️ Recientes" }
