@@ -11,8 +11,8 @@
 	display: grid;
 	grid-template-areas:
 		"header header"
-		"aside main ";
-	grid-template-columns: auto 1fr;
+		"main aside";
+	grid-template-columns: 1fr auto;
 	grid-template-rows: auto auto;
 }
 

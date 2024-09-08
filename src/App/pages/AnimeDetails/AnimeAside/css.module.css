@@ -1,0 +1,21 @@
+.aside {
+	position: relative;
+}
+
+.aside img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	padding: var(--sm);
+	padding-left: 0;
+}
+
+.show {
+	position: absolute;
+	bottom: var(--md);
+	right: var(--md);
+	background-color: var(--bg-surf);
+	line-height: 19px;
+	padding: var(--sm);
+	border-radius: var(--md);
+}

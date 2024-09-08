@@ -1,6 +1,7 @@
 .genres {
 	display: flex;
 	gap: var(--sm);
+	align-self: center;
 }
 
 .genre {

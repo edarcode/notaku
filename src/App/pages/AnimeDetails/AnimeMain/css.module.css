@@ -1,5 +1,6 @@
 .main {
-	padding: var(--lg);
+	padding: var(--sm);
+	display: flex;
 }
 
 .wrapper {
@@ -8,7 +9,12 @@
 	gap: var(--md);
 	background-color: var(--bg-surf);
 	padding: var(--lg);
-	border-radius: var(--md);
+}
+
+@media (prefers-color-scheme: light) {
+	.wrapper {
+		background-color: var(--l-bg-surf);
+	}
 }
 
 .episodeCount {
@@ -24,13 +30,14 @@
 	justify-self: end;
 	text-align: end;
 	font-size: smaller;
+	font-family: "Righteous", sans-serif;
 }
 
 .status {
 	position: absolute;
 	bottom: var(--lg);
 	left: var(--lg);
-	color: whitesmoke;
+
 	font-weight: 700;
 	text-transform: uppercase;
 }
