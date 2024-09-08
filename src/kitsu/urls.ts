@@ -5,6 +5,8 @@ class Kitsu {
 
 	animes = `${this.base}/anime?page[limit]=20`;
 
+	animeById = `${this.base}/anime`;
+
 	genres = [
 		{ value: "", display: "Cualquiera" },
 		{ value: "action", display: "Acción" },
