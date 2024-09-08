@@ -4,9 +4,11 @@ import { useForm } from "react-hook-form";
 import { filterSchema } from "../filterSchema";
 import InputText from "../../../../components/inputs/InputText/InputText";
 import Btn from "../../../../components/buttons/Btn/Btn";
-import { FilterAnimes } from "../hooks/useAnimes";
+import Select from "../../../../components/inputs/Select/Select";
+import { KITSU } from "../../../../kitsu/urls";
+import { FilterAnimes as Filters } from "../hooks/useAnimes";
 
-export default function AnimeFilters({ filterAnimes }: Props) {
+export default function FilterAnimes({ filterAnimes, isLoading }: Props) {
 	const {
 		register,
 		handleSubmit,
@@ -19,9 +21,12 @@ export default function AnimeFilters({ filterAnimes }: Props) {
 			onSubmit={handleSubmit(filters => filterAnimes(filters))}
 		>
 			<InputText {...register("text")} />
-			<Btn disabled={Object.keys(errors).length > 0}>Filtrar</Btn>
+			<Select opt={KITSU.genres} {...register("genre")} />
+			<Btn disabled={Object.keys(errors).length > 0} loading={isLoading}>
+				Filtrar
+			</Btn>
 		</form>
 	);
 }
 
-type Props = { filterAnimes: FilterAnimes };
+type Props = { filterAnimes: Filters; isLoading: boolean };

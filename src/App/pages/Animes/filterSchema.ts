@@ -2,6 +2,16 @@ import { z } from "zod";
 
 export const filterSchema = z
 	.object({
-		text: z.string().min(4, { message: "Mín 4 dígitos" }).optional()
+		text: z.string(),
+		genre: z.enum([
+			"",
+			"action",
+			"adventure",
+			"comedy",
+			"drama",
+			"sci-fi",
+			"space"
+		])
 	})
+	.partial()
 	.strict();
