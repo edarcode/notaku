@@ -13,12 +13,17 @@ export default function AnimeDetails() {
 
 	return (
 		<article className={css.detail}>
-			<header>
-				<img src={anime.coverImage?.original} alt={anime.title} />
-				<div>{anime.title}</div>
-				<div>⭐{Number(anime.rating).toFixed()}</div>
-				<div>{anime.popularity}</div>
-				<div>{anime.favoritesCount}</div>
+			<header className={css.header}>
+				<img
+					className={css.cover}
+					src={anime.coverImage?.original}
+					alt={anime.title}
+				/>
+				<div className={css.title}>{anime.title}</div>
+				<div className={css.stats}>
+					<div className={css.rating}>⭐{Number(anime.rating).toFixed()}</div>
+					<div className={css.favorite}>{anime.favoritesCount} FANS</div>
+				</div>
 			</header>
 			<aside>
 				<img src={anime.posterImage?.small} alt={anime.title} />
@@ -33,6 +38,7 @@ export default function AnimeDetails() {
 					<time dateTime={anime.startDate}>
 						{formatDate(anime.startDate as string)}
 					</time>
+					<br />
 					<time dateTime={anime.endDate as string}>
 						{formatDate(anime.endDate as string)}
 					</time>

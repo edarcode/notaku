@@ -11,3 +11,49 @@
 	display: grid;
 	gap: var(--xl);
 }
+
+.header {
+	position: relative;
+}
+
+.cover {
+	width: 100%;
+	height: calc(50vh - 80px); /* 80px altura del header*/
+	object-fit: cover;
+}
+
+.title,
+.stats {
+	position: absolute;
+}
+
+.title {
+	top: 0;
+	left: var(--md);
+	color: var(--hl);
+	font-weight: 700;
+	font-size: xx-large;
+}
+
+.stats {
+	bottom: var(--md);
+	right: var(--md);
+	display: flex;
+	align-items: center;
+	gap: var(--sm);
+	background-color: var(--l-bg-surf);
+	padding-right: var(--sm);
+	color: var(--l-t-sec);
+	border-radius: var(--sm);
+}
+
+.rating {
+	color: var(--hl);
+	background-color: var(--bg-surf);
+	padding: var(--sm);
+}
+
+.favorite {
+	line-height: 13px;
+	font-size: small;
+}
