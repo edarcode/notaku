@@ -14,7 +14,13 @@ class Kitsu {
 		{ value: "comedy", display: "Humor" },
 		{ value: "drama", display: "Drama" },
 		{ value: "sci-fi", display: "Ficción" },
-		{ value: "space", display: "Espacial" }
+		{ value: "space", display: "Espacial" },
+		{ value: "sports", display: "Deporte" },
+		{ value: "mystery", display: "Misterio" },
+		{ value: "psychological", display: "Psicológico" },
+		{ value: "horror", display: "Horror" },
+		{ value: "thriller", display: "Thriller" },
+		{ value: "romance", display: "Romance" }
 	];
 
 	animeStatus = [
