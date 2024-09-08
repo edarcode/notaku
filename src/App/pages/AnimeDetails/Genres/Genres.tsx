@@ -1,7 +1,7 @@
 import css from "./css.module.css";
 
 export default function Genres({ genres }: Props) {
-	if (!genres) return <span>Sin género</span>;
+	if (!genres) return <span className={css.genre}>Sin género</span>;
 	return (
 		<div className={css.genres}>
 			{genres.map(genre => (
