@@ -22,7 +22,8 @@ export default function AnimeDetails() {
 				<div className={css.title}>{anime.title}</div>
 				<div className={css.stats}>
 					<div className={css.rating}>⭐{Number(anime.rating).toFixed()}</div>
-					<div className={css.favorite}>{anime.favoritesCount} FANS</div>
+					<div className={css.fans}>{anime.favoritesCount} FANS</div>
+					<div className={css.popularity}>#{anime.popularity}</div>
 				</div>
 			</header>
 			<aside>

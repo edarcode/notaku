@@ -53,7 +53,7 @@
 	padding: var(--sm);
 }
 
-.favorite {
-	line-height: 13px;
+.fans,
+.popularity {
 	font-size: small;
 }
