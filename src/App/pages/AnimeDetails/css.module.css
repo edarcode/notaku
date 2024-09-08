@@ -9,5 +9,20 @@
 
 .detail {
 	display: grid;
-	gap: var(--xl);
+	grid-template-areas:
+		"header header"
+		"aside main ";
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto auto;
+}
+
+.detail header {
+	grid-area: header;
+}
+
+.detail aside {
+	grid-area: aside;
+}
+.detail main {
+	grid-area: main;
 }
