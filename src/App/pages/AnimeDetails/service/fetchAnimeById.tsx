@@ -42,6 +42,7 @@ const mapKitsuRes = (data: KitsuRes) => {
 		coverImage: anime.attributes.coverImage,
 		youtubeVideoId: anime.attributes.youtubeVideoId,
 		showType: anime.attributes.showType,
+		favoritesCount: anime.attributes.favoritesCount,
 		genres: data.included.map(genre => ({
 			id: genre.id,
 			name: genre.attributes.name
@@ -89,6 +90,7 @@ export type AnimeById = {
 	};
 	youtubeVideoId?: string;
 	showType: "TV" | "Movie" | "OVA" | "ONA" | "Music" | "Special";
+	favoritesCount: number;
 	genres: {
 		id: string;
 		name: string;

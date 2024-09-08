@@ -1,14 +1,26 @@
-import { useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router-dom";
-import { fetchAnimeById } from "./service/fetchAnimeById";
+import { formatDate } from "../../../utils/formatDate";
+import { useAnimeById } from "./hooks/useAnimeById";
 
 export default function AnimeDetails() {
-	const { id } = useParams();
-	const { data } = useQuery({
-		queryKey: ["anime", id],
-		queryFn: ({ signal }) => fetchAnimeById(signal, id)
-	});
-	console.log(data);
+	const { isError, isLoading, anime } = useAnimeById();
 
-	return <div>Aquí mostraré todos los detalles del anime con id: {id}</div>;
+	if (isError) return <div>Error</div>;
+	if (isLoading) return <div>Loading</div>;
+	if (!anime) return <div>Anime no encontrado</div>;
+
+	return (
+		<div>
+			<img src={anime.coverImage?.original} alt={anime.title} />
+			<img src={anime.posterImage?.small} alt={anime.title} />
+			<div>{anime.title}</div>
+			<div>{anime.synopsis}</div>
+			<div>{anime.showType}</div>
+			<div>⭐{Number(anime.rating).toFixed()}</div>
+			<div>{anime.popularity}</div>
+			<div>{anime.episodeCount}</div>
+			<div>{anime.favoritesCount}</div>
+			<div>{formatDate(anime.startDate)}</div>
+			<div>{formatDate(anime.endDate)}</div>
+		</div>
+	);
 }
