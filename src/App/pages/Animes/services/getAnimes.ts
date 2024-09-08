@@ -5,8 +5,8 @@ type Filters = {
 	genres?: string;
 	text?: string;
 	year?: number;
-	status?: keyof typeof KITSU.animeStatus;
-	sorting?: keyof typeof KITSU.animeSorting;
+	status?: string;
+	sorting?: string;
 };
 
 export const getAnimes = async (
