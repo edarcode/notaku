@@ -6,6 +6,7 @@
 .wrapper {
 	position: relative;
 	display: grid;
+	justify-items: start;
 	gap: var(--md);
 	background-color: var(--bg-surf);
 	padding: var(--lg);
