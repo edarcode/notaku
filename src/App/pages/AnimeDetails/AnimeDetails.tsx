@@ -10,7 +10,7 @@ export default function AnimeDetails() {
 	if (!anime) return <div>Anime no encontrado</div>;
 
 	return (
-		<div>
+		<article>
 			<img src={anime.coverImage?.original} alt={anime.title} />
 			<img src={anime.posterImage?.small} alt={anime.title} />
 			<div>{anime.title}</div>
@@ -23,6 +23,6 @@ export default function AnimeDetails() {
 			<div>{formatDate(anime.startDate)}</div>
 			<div>{formatDate(anime.endDate)}</div>
 			<Genres genres={anime.genres} />
-		</div>
+		</article>
 	);
 }

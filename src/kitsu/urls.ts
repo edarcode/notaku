@@ -20,7 +20,8 @@ class Kitsu {
 		{ value: "psychological", display: "Psicológico" },
 		{ value: "horror", display: "Horror" },
 		{ value: "thriller", display: "Thriller" },
-		{ value: "romance", display: "Romance" }
+		{ value: "romance", display: "Romance" },
+		{ value: "ecchi", display: "Ecchi" }
 	];
 
 	animeStatus = [
