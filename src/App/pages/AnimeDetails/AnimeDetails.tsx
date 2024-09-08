@@ -5,7 +5,7 @@ import { fetchAnimeById } from "./service/fetchAnimeById";
 export default function AnimeDetails() {
 	const { id } = useParams();
 	const { data } = useQuery({
-		queryKey: ["anime"],
+		queryKey: ["anime", id],
 		queryFn: ({ signal }) => fetchAnimeById(signal, id)
 	});
 	console.log(data);
