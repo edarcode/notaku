@@ -12,7 +12,7 @@
 	grid-template-areas:
 		"header header"
 		"main aside";
-	grid-template-columns: 1fr auto;
+	grid-template-columns: 1fr 30%;
 	grid-template-rows: auto auto;
 }
 
@@ -25,4 +25,15 @@
 }
 .detail main {
 	grid-area: main;
+}
+
+@media (max-width: 768px) {
+	.detail {
+		grid-template-areas:
+			"header"
+			"main"
+			"aside";
+
+		grid-template-columns: initial;
+	}
 }
