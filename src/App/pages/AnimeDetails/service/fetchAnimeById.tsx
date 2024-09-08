@@ -31,7 +31,7 @@ const mapKitsuRes = (data: KitsuRes) => {
 	const anime = data.data;
 	return {
 		id: anime.id,
-		title: anime.attributes.titles.en,
+		title: anime.attributes.titles.en || anime.attributes.titles.en_jp,
 		status: anime.attributes.status,
 		rating: anime.attributes.averageRating,
 		popularity: anime.attributes.popularityRank,

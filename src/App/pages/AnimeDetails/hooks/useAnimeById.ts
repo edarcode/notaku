@@ -4,7 +4,7 @@ import { fetchAnimeById } from "../service/fetchAnimeById";
 
 export const useAnimeById = () => {
 	const { id } = useParams();
-	const { data, isError, isLoading, error } = useQuery({
+	const { data, isError, isLoading } = useQuery({
 		queryKey: ["anime", id],
 		queryFn: ({ signal }) => fetchAnimeById(signal, id)
 	});
