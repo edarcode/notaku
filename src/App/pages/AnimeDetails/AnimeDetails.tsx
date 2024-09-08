@@ -20,8 +20,9 @@ export default function AnimeDetails() {
 			<div>{anime.popularity}</div>
 			<div>{anime.episodeCount}</div>
 			<div>{anime.favoritesCount}</div>
-			<div>{formatDate(anime.startDate)}</div>
-			<div>{formatDate(anime.endDate)}</div>
+			<div>{formatDate(anime.startDate as string)}</div>
+			<div>{formatDate(anime.endDate as string)}</div>
+			<div>{anime.status}</div>
 			<Genres genres={anime.genres} />
 		</article>
 	);

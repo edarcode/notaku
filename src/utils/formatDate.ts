@@ -1,7 +1,4 @@
-import { EdarErr } from "../err/EdarErr";
-
-export const formatDate = (date?: string | null | undefined) => {
-	if (!date) throw new EdarErr({ status: 400, msg: "Required date" });
+export const formatDate = (date: string) => {
 	const format = {
 		day: "numeric",
 		month: "long",

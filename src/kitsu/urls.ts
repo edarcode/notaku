@@ -8,7 +8,7 @@ class Kitsu {
 	animeById = `${this.base}/anime`;
 
 	genres = [
-		{ value: "", display: "Cualquiera" },
+		{ value: "", display: "Género" },
 		{ value: "action", display: "Acción" },
 		{ value: "adventure", display: "Aventura" },
 		{ value: "comedy", display: "Humor" },
@@ -25,11 +25,12 @@ class Kitsu {
 	];
 
 	animeStatus = [
-		{ value: "current", display: "Current" },
-		{ value: "finished", display: "Finished" },
-		{ value: "tba", display: "Tba" },
-		{ value: "unreleased", display: "Unreleased" },
-		{ value: "upcoming", display: "upcoming" }
+		{ value: "", display: "Estado" },
+		{ value: "current", display: "Emisión" },
+		{ value: "finished", display: "Finalizado" },
+		{ value: "tba", display: "Indeterminado" },
+		{ value: "unreleased", display: "No pulicado" },
+		{ value: "upcoming", display: "Próximo" }
 	];
 
 	animeSorting = [

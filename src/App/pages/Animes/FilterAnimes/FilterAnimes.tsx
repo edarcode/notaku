@@ -22,6 +22,7 @@ export default function FilterAnimes({ filterAnimes, isLoading }: Props) {
 		>
 			<InputText {...register("text")} placeholder="🔎 Anime" />
 			<Select opt={KITSU.genres} {...register("genre")} />
+			<Select opt={KITSU.animeStatus} {...register("status")} />
 			<Select
 				className={css.sorting}
 				opt={KITSU.animeSorting}
