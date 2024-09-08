@@ -7,9 +7,11 @@ export default function AnimeMain({ anime }: Props) {
 	return (
 		<main className={css.main}>
 			<div className={css.wrapper}>
-				<h4>Sinopsis</h4>
 				<Genres genres={anime.genres} />
-				<p>{anime.synopsis}</p>
+				<div>
+					<h4>Sinopsis</h4>
+					<p>{anime.synopsis}</p>
+				</div>
 				<span className={css.episodeCount}>{anime.episodeCount} CAP</span>
 				<div className={css.status}>{anime.status}</div>
 				<div className={css.times}>
