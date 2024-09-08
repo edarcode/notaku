@@ -9,7 +9,7 @@ export default function AnimeHeader({ anime }: Props) {
 				src={anime.coverImage?.original}
 				alt={anime.title}
 			/>
-			<div className={css.title}>🪧{anime.title}</div>
+			<h1 className={css.title}>🪧{anime.title}</h1>
 			<div className={css.stats}>
 				<div className={css.rating}>⭐{Number(anime.rating).toFixed()}</div>
 				<div className={css.fans}>{anime.favoritesCount} FANS</div>

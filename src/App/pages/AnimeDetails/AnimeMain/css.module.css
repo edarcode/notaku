@@ -1,0 +1,25 @@
+.main {
+	padding: var(--lg);
+}
+
+.wrapper {
+	position: relative;
+	display: grid;
+	gap: var(--md);
+	background-color: var(--bg-surf);
+	padding: var(--md);
+	border-radius: var(--md);
+}
+
+.episodeCount {
+	position: absolute;
+	top: var(--md);
+	right: var(--md);
+}
+
+.times {
+	display: grid;
+	gap: var(--sm);
+	justify-self: end;
+	text-align: end;
+}

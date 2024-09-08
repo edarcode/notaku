@@ -4,7 +4,8 @@
 }
 
 .genre {
-	background-color: var(--bg-surf);
+	background-color: var(--pri);
+	color: whitesmoke;
 	line-height: 16px;
 	padding: var(--sm) var(--md);
 	font-weight: 700;
@@ -13,6 +14,6 @@
 
 @media (prefers-color-scheme: light) {
 	.genre {
-		background-color: var(--l-bg-surf);
+		background-color: var(--l-pri);
 	}
 }
