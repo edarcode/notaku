@@ -1,13 +1,15 @@
+import Spinner from "../../../components/spinners/Spinner/Spinner";
 import { formatDate } from "../../../utils/formatDate";
 import Genres from "./Genres/Genres";
 import { useAnimeById } from "./hooks/useAnimeById";
+import css from "./css.module.css";
 
 export default function AnimeDetails() {
 	const { isError, isLoading, anime } = useAnimeById();
 
-	if (isError) return <div>Error</div>;
-	if (isLoading) return <div>Loading...</div>;
-	if (!anime) return <div>Anime no encontrado</div>;
+	if (isError) return <div className={css.err}>Error cargando el anime</div>;
+	if (isLoading) return <Spinner className={css.loading} />;
+	if (!anime) return <div className={css.empty}>No se encontró el anime</div>;
 
 	return (
 		<article>
