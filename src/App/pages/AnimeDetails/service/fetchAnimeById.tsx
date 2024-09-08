@@ -54,7 +54,7 @@ const mapKitsuRes = (data: KitsuRes) => {
 export type AnimeById = {
 	id: string;
 	title: string;
-	status: "finished" | "ongoing" | "upcoming" | "current" | "tba";
+	status: string;
 	rating: string;
 	popularity: number;
 	episodeCount: number;
@@ -90,7 +90,7 @@ export type AnimeById = {
 		};
 	};
 	youtubeVideoId?: string;
-	showType: "TV" | "Movie" | "OVA" | "ONA" | "Music" | "Special";
+	showType: string;
 	favoritesCount: number;
 	genres: {
 		id: string;

@@ -3,6 +3,8 @@ import { formatDate } from "../../../utils/formatDate";
 import Genres from "./Genres/Genres";
 import { useAnimeById } from "./hooks/useAnimeById";
 import css from "./css.module.css";
+import AnimeHeader from "./AnimeHeader/AnimeHeader";
+import { AnimeById } from "./service/fetchAnimeById";
 
 export default function AnimeDetails() {
 	const { isError, isLoading, anime } = useAnimeById();
@@ -13,19 +15,7 @@ export default function AnimeDetails() {
 
 	return (
 		<article className={css.detail}>
-			<header className={css.header}>
-				<img
-					className={css.cover}
-					src={anime.coverImage?.original}
-					alt={anime.title}
-				/>
-				<div className={css.title}>🪧{anime.title}</div>
-				<div className={css.stats}>
-					<div className={css.rating}>⭐{Number(anime.rating).toFixed()}</div>
-					<div className={css.fans}>{anime.favoritesCount} FANS</div>
-					<div className={css.popularity}>#{anime.popularity}</div>
-				</div>
-			</header>
+			<AnimeHeader anime={anime as AnimeById} />
 			<aside>
 				<img src={anime.posterImage?.small} alt={anime.title} />
 				<div>{anime.status}</div>
