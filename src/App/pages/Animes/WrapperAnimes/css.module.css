@@ -51,6 +51,7 @@
 .rating {
 	top: var(--sm);
 	right: var(--sm);
+	color: var(--hl);
 }
 
 .status {

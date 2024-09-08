@@ -24,9 +24,7 @@ export default function WrapperAnimes({
 						whileHover={{ scale: 1.02 }}
 						transition={{ duration: 0.25 }}
 					>
-						<div className={css.title}>
-							{anime.title.split(" ", 2).join(" ")}
-						</div>
+						<div className={css.rating}>⭐{Number(anime.rating).toFixed()}</div>
 						<Link to={ANIME_DETAILS.to + anime.id}>
 							<img
 								className={css.img}
@@ -35,6 +33,9 @@ export default function WrapperAnimes({
 								loading="lazy"
 							/>
 						</Link>
+						<div className={css.title}>
+							{anime.title.split(" ", 2).join(" ")}
+						</div>
 					</motion.div>
 				))
 			)}
