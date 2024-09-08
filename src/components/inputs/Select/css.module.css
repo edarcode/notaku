@@ -1,7 +1,6 @@
 .label {
 	display: grid;
 	gap: var(--xs);
-	width: 125px;
 }
 
 .title {

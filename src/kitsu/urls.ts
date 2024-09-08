@@ -24,9 +24,9 @@ class Kitsu {
 	];
 
 	animeSorting = [
-		{ value: "popularityRank", display: "Mejor calificado" },
-		{ value: "-startDate", display: "Nuevos animes" },
-		{ value: "ratingRank", display: "Mejor anime de todos" }
+		{ value: "popularityRank", display: "⭐ Individual" },
+		{ value: "ratingRank", display: "⭐ Global" },
+		{ value: "-startDate", display: "🗓️ Recientes" }
 	];
 }
 
