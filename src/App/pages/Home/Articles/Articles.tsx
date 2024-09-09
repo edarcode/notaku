@@ -7,21 +7,24 @@ import { ARTICLE_DETAILS } from "../../../router/children";
 export default function Articles() {
 	return (
 		<section className={css.wrapper}>
-			{ARTICLE.map(article => (
-				<Link to={ARTICLE_DETAILS.to + article.id} key={article.id}>
-					<article className={css.article}>
-						<img
-							className={css.img}
-							src={article.coverImage.original}
-							alt={article.title}
-						/>
-						<h3 className={css.title}>{article.title}</h3>
-						<time className={css.time} dateTime={article.published}>
-							{formatDate(article.published)}
-						</time>
-					</article>
-				</Link>
-			))}
+			{ARTICLE.map(article => {
+				if (!article.id) return null;
+				return (
+					<Link to={ARTICLE_DETAILS.to + article.id} key={article.id}>
+						<article className={css.article}>
+							<img
+								className={css.img}
+								src={article.coverImage.original}
+								alt={article.title}
+							/>
+							<h3 className={css.title}>{article.title}</h3>
+							<time className={css.time} dateTime={article.published}>
+								{formatDate(article.published)}
+							</time>
+						</article>
+					</Link>
+				);
+			})}
 		</section>
 	);
 }

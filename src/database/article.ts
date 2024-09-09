@@ -1,5 +1,31 @@
 export const ARTICLE = [
 	{
+		id: "",
+		author: "",
+		originalArticle: "",
+		source: "",
+		published: "",
+		title: "",
+		description: "",
+		coverImage: {
+			original: ""
+		},
+		content: [
+			{
+				id: crypto.randomUUID(),
+				order: 1,
+				type: "p",
+				text: ""
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 2,
+				type: "youtube",
+				youtubeId: "j8fvSvM-MBs"
+			}
+		]
+	},
+	{
 		id: "1",
 		author: "edarcode",
 		originalArticle:
