@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 export const useArticleById = () => {
 	const { id } = useParams();
 	const { isError, isLoading, data } = useQuery({
-		queryKey: ["article"],
+		queryKey: ["article", id],
 		queryFn: () => fetchArticleById(id)
 	});
 
