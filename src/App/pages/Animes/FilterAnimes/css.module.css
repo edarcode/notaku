@@ -6,6 +6,14 @@
 	gap: var(--md);
 }
 
+.text {
+	width: calc(158px + 158px + var(--md));
+}
+
 .form select {
+	width: 158px;
+}
+
+.form button {
 	width: 158px;
 }

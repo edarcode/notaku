@@ -20,7 +20,11 @@ export default function FilterAnimes({ filterAnimes, isLoading }: Props) {
 			className={css.form}
 			onSubmit={handleSubmit(filters => filterAnimes(filters))}
 		>
-			<InputText {...register("text")} placeholder="🔎 Anime" />
+			<InputText
+				className={css.text}
+				{...register("text")}
+				placeholder="🔎 Anime"
+			/>
 			<Select opt={KITSU.genres} {...register("genre")} />
 			<Select opt={KITSU.animeStatus} {...register("status")} />
 			<Select
