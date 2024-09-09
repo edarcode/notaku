@@ -44,3 +44,15 @@
 .footer {
 	padding: 0 var(--lg);
 }
+
+.description {
+	background-color: var(--bg-surf);
+	padding-left: var(--md);
+	padding-right: var(--md);
+}
+
+@media (prefers-color-scheme: light) {
+	.description {
+		background-color: var(--l-bg-surf);
+	}
+}

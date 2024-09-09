@@ -6,6 +6,12 @@ import { useArticleById } from "./hooks/useArticleById";
 export default function ArticleDetails() {
 	const { isError, isLoading, article } = useArticleById();
 
+	const CONTENT = article?.content.map(item => {
+		if (item.type === "youtube") return <span>{item.youtubeId}</span>;
+		if (item.type === "p") return <p>{item.text}</p>;
+		return null;
+	});
+
 	if (isError) return <div>Err</div>;
 	if (isLoading) return <div>Cargando...</div>;
 	if (!article) return <div>No existe el articulo</div>;
@@ -25,12 +31,8 @@ export default function ArticleDetails() {
 				<cite className={css.cite}>{article.source}</cite>
 			</header>
 			<main className={css.main}>
-				<p>{article.description}</p>
-				{article.content.map(item => {
-					if (item.type === "youtube") return <span>{item.youtubeId}</span>;
-					if (item.type === "p") return <p>{item.text}</p>;
-					return null;
-				})}
+				<p className={css.description}>{article.description}</p>
+				{CONTENT}
 			</main>
 			<footer className={css.footer}>
 				<address>Escrito por {article.author}</address>
