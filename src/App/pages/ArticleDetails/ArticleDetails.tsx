@@ -18,6 +18,7 @@ export default function ArticleDetails() {
 			);
 
 		if (item.type === "p") return <p key={item.id}>{item.text}</p>;
+		if (item.type === "img") return <img src={item.href} alt={item.alt} />;
 		return null;
 	});
 
