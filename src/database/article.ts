@@ -21,7 +21,7 @@ export const ARTICLE = [
 				id: crypto.randomUUID(),
 				order: 2,
 				type: "youtube",
-				youtubeId: "j8fvSvM-MBs"
+				youtubeId: ""
 			}
 		]
 	},
