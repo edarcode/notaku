@@ -169,5 +169,47 @@ export const ARTICLE = [
 				text: "La discusión sobre por qué el anime japonés se enfoca tanto en estudiantes de instituto revela una combinación de razones comerciales y culturales. La adolescencia se idealiza como un período de libertad y descubrimiento, lo que la convierte en el entorno perfecto para las historias de escapismo que ofrece el anime. Sin embargo, algunos fanáticos consideran que este enfoque constante podría estar agotando su atractivo, y abogan por una mayor diversidad de personajes y contextos en el futuro."
 			}
 		]
+	},
+	{
+		id: "3",
+		author: "edarcode",
+		originalArticle:
+			"https://somoskudasai.com/noticias/cultura-otaku/estas-son-las-tsundere-favoritas-de-occidente/",
+		source: "Reddit",
+		published: "4 septiembre 2024",
+		title: "Estas son las tsundere favoritas de Occidente",
+		description:
+			"Recientemente, la comunidad de Reddit llevó a cabo una encuesta para determinar cuáles son los personajes tsundere más queridos por los seguidores del anime. Con la participación de 1211 usuarios, la encuesta permitió a los votantes seleccionar hasta diez personajes, otorgando 3 puntos al que consideraran su favorito número uno, 2 puntos a los segundos y terceros favoritos, y 1 punto a las demás selecciones.",
+		coverImage: {
+			original:
+				"https://somoskudasai.com/wp-content/uploads/2024/09/kudasai_mushoku.jpg"
+		},
+		content: [
+			{
+				id: crypto.randomUUID(),
+				order: 1,
+				type: "p",
+				text: "El arquetipo tsundere es uno de los más emblemáticos en el anime y otros medios relacionados. Este tipo de personaje se caracteriza por una personalidad que alterna entre comportamientos hostiles y actitudes cariñosas, a menudo debido a un profundo conflicto interno. A pesar de su exterior áspero y a veces agresivo, el tsundere revela gradualmente su afecto y vulnerabilidad, lo que crea una dinámica interesante y frecuentemente cómica en las historias."
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 2,
+				type: "p",
+				text: "Los resultados de la encuesta destacaron los 25 personajes más populares en este arquetipo, junto con la frecuencia con la que fueron clasificados en los primeros tres lugares. Los datos reflejan una amplia gama de preferencias entre los fanáticos, subrayando la diversidad dentro del arquetipo tsundere y cómo estos personajes impactan las historias y las audiencias."
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 3,
+				type: "p",
+				text: "La popularidad de los personajes tsundere sigue siendo un tema fascinante, ya que ofrecen una mezcla única de dureza y ternura que ha capturado la imaginación de los fanáticos durante años. La encuesta no solo destaca los personajes más amados, sino también cómo este arquetipo ha evolucionado y se ha integrado en diversas narrativas dentro del mundo del anime."
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 2,
+				type: "img",
+				href: "https://somoskudasai.com/wp-content/uploads/2024/09/Red.jpg",
+				alt: "Top tsundere"
+			}
+		]
 	}
 ];
