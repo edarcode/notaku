@@ -10,9 +10,12 @@ export default function WrapperAnimes({
 	isLoading,
 	kitsuAnimePages
 }: Props) {
-	if (isError) return <div className={css.err}>Error cargando datos</div>;
+	if (isError) return <div className={css.err}>Error al cargar animes.</div>;
 	if (isLoading) return <Spinner className={css.loading} />;
-	if (!kitsuAnimePages) return <div className={css.empty}>No hay datos</div>;
+	if (!kitsuAnimePages)
+		return (
+			<div className={css.empty}>Ningún anime coincide con tu búsqueda.</div>
+		);
 
 	return (
 		<div className={css.wrapper}>

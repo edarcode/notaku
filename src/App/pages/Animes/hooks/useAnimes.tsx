@@ -28,7 +28,8 @@ export const useAnimes = () => {
 	return {
 		isLoading,
 		isError,
-		kitsuAnimePages: data && data.pages,
+		kitsuAnimePages:
+			data && data.pages[0].animes.length ? data.pages : undefined,
 		filterAnimes
 	};
 };
