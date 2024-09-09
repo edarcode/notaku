@@ -1,5 +1,6 @@
 import AnimeDetails from "../pages/AnimeDetails/AnimeDetails";
 import Animes from "../pages/Animes/Animes";
+import ArticleDetails from "../pages/ArticleDetails/ArticleDetails";
 import Home from "../pages/Home/Home";
 
 export const HOME = {
@@ -24,4 +25,12 @@ export const ANIME_DETAILS = {
 	to: "/anime/",
 	display: "",
 	element: <AnimeDetails />
+};
+
+export const ARTICLE_DETAILS = {
+	id: crypto.randomUUID(),
+	path: "article/:id",
+	to: "/article/",
+	display: "",
+	element: <ArticleDetails />
 };

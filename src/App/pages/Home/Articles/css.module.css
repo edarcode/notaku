@@ -1,5 +1,8 @@
 .wrapper {
 	padding: 0 var(--lg);
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sm);
 }
 
 .article {
