@@ -2,6 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--sm);
+	margin-right: calc(66px + var(--sm)); /* 66 lo que mide episodeCount*/
 }
 
 .genre {
