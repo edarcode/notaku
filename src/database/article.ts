@@ -1,6 +1,9 @@
 export const ARTICLE = [
 	{
-		id: crypto.randomUUID(),
+		id: "1",
+		author: "edarcode",
+		originalArticle:
+			"https://somoskudasai.com/noticias/cultura-otaku/the-apothecary-diaries-regresara-mejor-que-antes-afirman/",
 		source: "Crunchyroll",
 		published: "2024-09-08T01:18:30+00:00",
 		title: "The Apothecary Diaries regresará mejor que antes, afirman.",
