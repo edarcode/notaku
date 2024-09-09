@@ -1,9 +1,9 @@
 export const ARTICLE = [
 	{
+		id: crypto.randomUUID(),
 		source: "Crunchyroll",
 		published: "2024-09-08T01:18:30+00:00",
-		title:
-			"The Apothecary Diaries regresará mejor que antes, afirman — Kudasai",
+		title: "The Apothecary Diaries regresará mejor que antes, afirman.",
 		description:
 			"El director Norihiro Naganuma, responsable de la adaptación al anime de ‘The Apothecary Diaries‘ (Kusuriya no Hitorigoto), compartió recientemente en una entrevista con Crunchyroll algunos detalles sobre la tan esperada segunda temporada de la serie. Durante su aparición en el podcast The Anime Effect, Naganuma habló sobre lo que los fanáticos pueden esperar de la nueva entrega, adelantando que la historia profundizará en algunos de los misterios planteados durante la primera temporada.",
 		coverImage: {

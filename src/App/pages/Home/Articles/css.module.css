@@ -1,0 +1,39 @@
+.wrapper {
+	padding: 0 var(--lg);
+}
+
+.article {
+	position: relative;
+	width: 320px;
+	height: 200px;
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: contrast(0.7) brightness(0.7);
+	transition: filter 0.5s ease;
+}
+.img:hover {
+	filter: contrast(0.85) brightness(0.85);
+}
+
+.title,
+.time {
+	position: absolute;
+	color: white;
+	font-weight: bold;
+}
+
+.title {
+	top: var(--sm);
+	left: var(--sm);
+	font-size: x-large;
+}
+
+.time {
+	font-size: small;
+	bottom: var(--sm);
+	right: var(--sm);
+}
