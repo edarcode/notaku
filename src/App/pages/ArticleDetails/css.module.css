@@ -49,9 +49,11 @@
 }
 
 .footer {
-	display: flex;
-	justify-content: center;
-	gap: var(--md);
+	text-align: center;
+}
+
+.footer address {
+	display: inline;
 }
 
 .description {

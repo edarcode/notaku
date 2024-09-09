@@ -44,8 +44,7 @@ export default function ArticleDetails() {
 				{CONTENT}
 			</main>
 			<footer className={css.footer}>
-				<address>Escrito por {article.author}</address>
-				Inspirado en{" "}
+				<address>Escrito por {article.author}</address> e inspirado por{" "}
 				<Hyperlink href={article.originalArticle}>Kudasai</Hyperlink>
 			</footer>
 		</article>
