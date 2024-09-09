@@ -2,13 +2,20 @@ import Hyperlink from "../../../components/links/Hyperlink/Hyperlink";
 import { formatDate } from "../../../utils/formatDate";
 import css from "./css.module.css";
 import { useArticleById } from "./hooks/useArticleById";
+import "@justinribeiro/lite-youtube";
 
 export default function ArticleDetails() {
 	const { isError, isLoading, article } = useArticleById();
 
 	const CONTENT = article?.content.map(item => {
-		if (item.type === "youtube") return <span>{item.youtubeId}</span>;
-		if (item.type === "p") return <p>{item.text}</p>;
+		if (item.type === "youtube")
+			return (
+				<div key={item.id} className={css.youtube}>
+					<lite-youtube videoId={item.youtubeId}></lite-youtube>
+				</div>
+			);
+
+		if (item.type === "p") return <p key={item.id}>{item.text}</p>;
 		return null;
 	});
 

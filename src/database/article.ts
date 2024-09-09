@@ -24,7 +24,7 @@ export const ARTICLE = [
 				id: crypto.randomUUID(),
 				order: 2,
 				type: "youtube",
-				youtubeId: "j8fvSvM-MBs?si=I-xydoA0x6u_FUe6"
+				youtubeId: "j8fvSvM-MBs"
 			},
 
 			{
@@ -49,7 +49,7 @@ export const ARTICLE = [
 				id: crypto.randomUUID(),
 				order: 6,
 				type: "youtube",
-				youtubeId: "yo8rklUv1EY?si=Lc5bZwtqY9imsZJ4"
+				youtubeId: "yo8rklUv1EY"
 			}
 		]
 	}
