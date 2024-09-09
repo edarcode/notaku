@@ -205,7 +205,7 @@ export const ARTICLE = [
 			},
 			{
 				id: crypto.randomUUID(),
-				order: 2,
+				order: 4,
 				type: "img",
 				href: "https://somoskudasai.com/wp-content/uploads/2024/09/Red.jpg",
 				alt: "Top tsundere"
