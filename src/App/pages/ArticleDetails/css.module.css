@@ -38,6 +38,9 @@
 .main {
 	display: grid;
 	gap: var(--lg);
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .main,
@@ -45,8 +48,10 @@
 	padding: 0 var(--lg);
 }
 
-.youtube {
-	max-width: 600px;
+.footer {
+	display: flex;
+	justify-content: center;
+	gap: var(--md);
 }
 
 .description {

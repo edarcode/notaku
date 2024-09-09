@@ -1,8 +1,10 @@
+import { DOMAttributes } from "react";
 import Hyperlink from "../../../components/links/Hyperlink/Hyperlink";
 import { formatDate } from "../../../utils/formatDate";
 import css from "./css.module.css";
 import { useArticleById } from "./hooks/useArticleById";
 import "@justinribeiro/lite-youtube";
+import { LiteYTEmbed } from "@justinribeiro/lite-youtube";
 
 export default function ArticleDetails() {
 	const { isError, isLoading, article } = useArticleById();
@@ -48,4 +50,13 @@ export default function ArticleDetails() {
 			</footer>
 		</article>
 	);
+}
+
+type CustomElement<T> = Partial<T & DOMAttributes<T> & { children: any }>;
+declare global {
+	namespace JSX {
+		interface IntrinsicElements {
+			["lite-youtube"]: CustomElement<LiteYTEmbed>;
+		}
+	}
 }
