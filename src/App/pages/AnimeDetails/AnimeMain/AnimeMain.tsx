@@ -8,12 +8,10 @@ export default function AnimeMain({ anime }: Props) {
 		<main className={css.main}>
 			<div className={css.wrapper}>
 				<Genres genres={anime.genres} />
-				<div>
+				<div className={css.wrapper_synopsis}>
 					<h4>Sinopsis</h4>
-					<p>{anime.synopsis}</p>
+					<p className={css.synopsis}>{anime.synopsis}</p>
 				</div>
-				<span className={css.episodeCount}>{anime.episodeCount} CAP</span>
-				<div className={css.status}>{anime.status}</div>
 				<div className={css.times}>
 					<time dateTime={anime.startDate}>
 						Inició {formatDate(anime.startDate as string)}
@@ -22,6 +20,9 @@ export default function AnimeMain({ anime }: Props) {
 						Finalizó {formatDate(anime.endDate as string)}
 					</time>
 				</div>
+
+				<div className={css.status}>{anime.status}</div>
+				<span className={css.episodeCount}>{anime.episodeCount} CAP</span>
 			</div>
 		</main>
 	);

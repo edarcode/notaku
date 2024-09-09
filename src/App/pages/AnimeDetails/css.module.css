@@ -14,6 +14,10 @@
 		"main aside";
 	grid-template-columns: 1fr 284px;
 	grid-template-rows: auto 402px;
+
+	max-width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .detail header {
