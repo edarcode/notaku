@@ -1,4 +1,46 @@
 .article {
 	display: grid;
+	gap: var(--xl);
+}
+
+.header {
+	position: relative;
+	height: 50vh;
+}
+
+.cover {
+	filter: brightness(80%);
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.title,
+.cite,
+.time {
+	position: absolute;
+	color: white;
+	left: var(--lg);
+}
+
+.title {
+	bottom: var(--xxl);
+}
+
+.time {
+	bottom: var(--xl);
+}
+
+.cite {
+	bottom: var(--lg);
+}
+
+.main {
+	display: grid;
 	gap: var(--lg);
+}
+
+.main,
+.footer {
+	padding: 0 var(--lg);
 }

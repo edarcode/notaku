@@ -12,21 +12,30 @@ export default function ArticleDetails() {
 
 	return (
 		<article className={css.article}>
-			<header>
-				<img src={article.coverImage.original} alt={article.title} />
-				<h1>{article.title}</h1>
-				<time dateTime={article.published}>
+			<header className={css.header}>
+				<img
+					className={css.cover}
+					src={article.coverImage.original}
+					alt={article.title}
+				/>
+				<h1 className={css.title}>{article.title}</h1>
+				<time className={css.time} dateTime={article.published}>
 					{formatDate(article.published)}
 				</time>{" "}
-				<cite>{article.source}</cite>
+				<cite className={css.cite}>{article.source}</cite>
 			</header>
-			<main>
+			<main className={css.main}>
 				<p>{article.description}</p>
+				{article.content.map(item => {
+					if (item.type === "youtube") return <span>{item.youtubeId}</span>;
+					if (item.type === "p") return <p>{item.text}</p>;
+					return null;
+				})}
 			</main>
-			<footer>
+			<footer className={css.footer}>
 				<address>Escrito por {article.author}</address>
-				Basado en el{" "}
-				<Hyperlink href={article.originalArticle}>Articulo original</Hyperlink>
+				Inspirado en{" "}
+				<Hyperlink href={article.originalArticle}>Kudasai</Hyperlink>
 			</footer>
 		</article>
 	);
