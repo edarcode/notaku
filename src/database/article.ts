@@ -50,6 +50,12 @@ export const ARTICLE = [
 				order: 6,
 				type: "youtube",
 				youtubeId: "yo8rklUv1EY"
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 7,
+				type: "p",
+				text: "La segunda temporada de ‘The Apothecary Diaries’ está programada para estrenarse en 2025, y los fanáticos ya están anticipando cómo se desarrollarán los nuevos misterios y relaciones en este fascinante mundo de intriga y medicina."
 			}
 		]
 	}
