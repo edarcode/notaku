@@ -1,6 +1,6 @@
 .slider {
 	position: relative;
-	height: calc(100vh - 80px); /* 80px alto del header*/
+	height: calc(60vh - 80px); /* 80px alto del header*/
 }
 
 .img {
