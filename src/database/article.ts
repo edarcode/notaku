@@ -211,5 +211,71 @@ export const ARTICLE = [
 				alt: "Top tsundere"
 			}
 		]
+	},
+	{
+		id: "4",
+		author: "edarcode",
+		originalArticle:
+			"https://somoskudasai.com/noticias/cultura-otaku/por-que-los-otakus-dejan-de-ser-otakus/",
+		source: "Otakomu",
+		published: "9 septiembre 2024",
+		title: "¿Por qué los otakus dejan de ser otakus?",
+		description:
+			"Una curiosa afirmación se ha vuelto tendencia en redes sociales en Japón: “La razón número uno para dejar de ser otaku es por culpa de otros otakus“. Esta frase ha generado una ola de discusiones y reflexiones entre los usuarios de plataformas como Twitter, donde los fanáticos han expresado su frustración ante la comunidad otaku y cómo las acciones de otros pueden influir en sus propios intereses.",
+		coverImage: {
+			original:
+				"https://somoskudasai.com/wp-content/uploads/2024/09/kudasai_japon.jpg"
+		},
+		content: [
+			{
+				id: crypto.randomUUID(),
+				order: 1,
+				type: "img",
+				href: "https://somoskudasai.com/wp-content/uploads/2024/09/tweet-1831890851666260212.jpg",
+				alt: "Captura pantalla tweet"
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 2,
+				type: "p",
+				text: "La afirmación resonó especialmente entre aquellos que han experimentado lo que llaman “el agotamiento otaku”, una situación en la que la presión o el comportamiento de otros fanáticos los lleva a perder el interés por las franquicias y personajes que alguna vez adoraron. Aunque el amor por las series y personajes sigue presente, la interacción con “otakus problemáticos” puede hacer que algunas personas prefieran alejarse de la comunidad o incluso de la industria en general."
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 3,
+				type: "p",
+				text: "Uno de los comentarios que capturó este sentimiento decía: “Cuando te alejas de algo que te gusta, generalmente es por las acciones o el comportamiento de los otros fans. Yo mismo soy consciente de esto y trato de ser cuidadoso, pero a veces me doy cuenta de que soy visto con malos ojos“. Este usuario reconoce que la comunidad otaku puede ser complicada, y aunque trata de evitar conflictos, es consciente de que otros lo perciben de manera negativa solo por su afiliación con el fandom."
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 4,
+				type: "p",
+				text: "Otra persona mencionó una experiencia similar: “Aunque no llegué a dejar de ser otaku por completo, sí hay muchas veces en las que dejo de asistir a eventos por culpa de otros otakus. Esto sucede tanto en la música rock como en el mundo de las idols. Cuando los otakus comienzan a buscar aprobación constante de otros, es ahí donde empieza la corrupción.” Este comentario destaca cómo, en muchos casos, el deseo de validación dentro de la comunidad puede desencadenar conductas tóxicas."
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 5,
+				type: "p",
+				text: "Además, se compartió la idea de que muchos otakus llegan a un punto en el que “no quieren ser asociados” con ciertos grupos de fanáticos. “A menudo me siento así. No quiero que me asocien con ellos“, escribió un usuario, sugiriendo que el estigma de ser percibido como parte de una comunidad desagradable los lleva a alejarse, incluso de sus propias aficiones."
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 6,
+				type: "p",
+				text: "La presión social dentro del fandom también ha sido objeto de debate. Un usuario comentó: “Es por eso que creo que si realmente amas algo, debes evitar involucrar a otros lo más que puedas y tampoco debes presumirlo“. La situación incluso ha afectado a jugadores de títulos populares. Un fan de Blue Archive mencionó: “Dejé Blue Archive porque los otros otakus eran demasiado desagradables. No quería que me vieran como uno de ellos“."
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 7,
+				type: "p",
+				text: "Otros comentarios también subrayaron el impacto negativo en la relación con los personajes favoritos: “Lo entiendo perfectamente… Me ha pasado en dos comunidades. Amo a mi personaje favorito, pero el comportamiento de otros otakus ha enfriado mi pasión por ellos“. A pesar de todo, no todos comparten la misma postura. Un fan expresó una perspectiva distinta: “Me he vuelto tan solitario que, aunque otros otakus me molesten, nunca fue una razón suficiente para dejar un contenido“."
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 8,
+				type: "p",
+				text: "El fenómeno de abandonar el fandom debido a otros otakus es un reflejo de cómo las dinámicas sociales dentro de cualquier comunidad pueden influir en las experiencias personales. Aunque las razones para seguir o dejar un contenido pueden variar, está claro que el comportamiento de los otros fanáticos juega un papel importante en las decisiones de muchos."
+			}
+		]
 	}
 ];
