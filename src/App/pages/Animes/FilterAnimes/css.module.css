@@ -4,16 +4,30 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: var(--md);
+	padding-left: var(--md);
+	padding-right: var(--md);
+}
+
+.genre,
+.sorting,
+.sorting,
+.status,
+.btn {
+	width: 158px;
+}
+
+@media (max-width: 339px) {
+	.genre,
+	.sorting,
+	.sorting,
+	.status,
+	.btn,
+	.text {
+		width: 100%;
+		max-width: 284px;
+	}
 }
 
 .text {
 	width: calc(158px + 158px + var(--md));
-}
-
-.form select {
-	width: 158px;
-}
-
-.form button {
-	width: 158px;
 }
