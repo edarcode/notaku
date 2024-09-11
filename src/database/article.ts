@@ -277,5 +277,41 @@ export const ARTICLE = [
 				text: "El fenómeno de abandonar el fandom debido a otros otakus es un reflejo de cómo las dinámicas sociales dentro de cualquier comunidad pueden influir en las experiencias personales. Aunque las razones para seguir o dejar un contenido pueden variar, está claro que el comportamiento de los otros fanáticos juega un papel importante en las decisiones de muchos."
 			}
 		]
+	},
+	{
+		id: "5",
+		author: "edarcode",
+		originalArticle:
+			"https://somoskudasai.com/noticias/anime/bocchi-the-rock-tendria-segunda-temporada/",
+		source: "@d0nut2x en Twitter",
+		published: "10 septiembre 2024",
+		title: "Bocchi the Rock! tendría segunda temporada",
+		description:
+			"Una filtración masiva reciente aseguró que los estudios CloverWorks retomarán la producción de la adaptación al anime de “Bocchi the Rock!” con una segunda temporada, tras concluir la emisión de “Nige Jouzu no Wakagimi (The Elusive Samurai)” y la supuesta segunda temporada de “Sono Bisque Doll wa Koi wo Suru (My Dress-Up Darling)”.",
+		coverImage: {
+			original:
+				"https://somoskudasai.com/wp-content/uploads/2024/09/kudasai_bocchitherock.jpg"
+		},
+		content: [
+			{
+				id: crypto.randomUUID(),
+				order: 1,
+				type: "p",
+				text: "Cabe señalar que esta información proviene de una fuente en China, por lo que no está confirmada de ninguna forma hasta el momento."
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 2,
+				type: "img",
+				href: "https://somoskudasai.com/wp-content/uploads/2024/09/Vis-2.jpg",
+				alt: "Bocchi the Rock!"
+			},
+			{
+				id: crypto.randomUUID(),
+				order: 3,
+				type: "p",
+				text: "Por su parte, Aki Hamaji comenzó la publicación del manga a través de la revista Manga Time Kirara Max de la editorial Houbunsha en diciembre de 2017. La adaptación al anime de doce episodios fue producida por los estudios CloverWorks y se emitió durante la temporada de Otoño-2022 (Octubre-Diciembre) en Japón. Posteriormente se produjeron dos películas recopilatorias estrenada en Junio-2024 y Agosto-2024 en cines de Japón."
+			}
+		]
 	}
 ];
