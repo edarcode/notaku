@@ -7,7 +7,7 @@ import { filterSchema } from "../filterSchema";
 import { z } from "zod";
 
 export const useAnimes = () => {
-	const isScrollAtEnd = useScrollEnd(50);
+	const isScrollAtEnd = useScrollEnd(500);
 	const [filters, setFilters] = useState<Filters>();
 
 	const { isLoading, isError, data, fetchNextPage } = useInfiniteQuery({
